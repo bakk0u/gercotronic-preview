@@ -1,393 +1,243 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <base href="/gercotronic-preview/">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gercotronic — Clean Fiber‑Optic Solutions</title>
-  <meta name="description" content="Gercotronic provides design, installation and maintenance of fiber‑optic networks across DACH & EU." />
-  <style>
-    /* ==========================
-       DESIGN SYSTEM
-       Inspired by mih-fiber / fiberhaus — clean, calm, feasible
-       ========================== */
-    :root{
-      --bg: #ffffff;           /* page background */
-      --ink: #0b1220;          /* primary text (deep navy) */
-      --muted: #5b6477;        /* secondary text */
-      --line: #e9edf3;         /* hairline borders */
-      --card: #f8fafc;         /* light card bg */
-      --accent: #2a91ff;       /* action blue */
-      --accent-2: #00d7db;     /* cyan for gradients */
-      --success: #16a34a;
-      --radius: 16px;
-      --shadow: 0 10px 30px rgba(16,24,40,.06);
-      --container: 1120px;
-    }
-    *,*::before,*::after{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      color:var(--ink); background:var(--bg); line-height:1.55; letter-spacing:.2px;
-    }
-    img{max-width:100%; display:block}
-    a{color:inherit; text-decoration:none}
-    .container{max-width:var(--container); margin:0 auto; padding:0 20px}
-    .btn{display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1.1rem; border-radius:12px; font-weight:600; border:1px solid transparent; transition:transform .15s ease, background .2s ease, border-color .2s ease;}
-    .btn:active{transform:translateY(1px)}
-    .btn-primary{background:var(--ink); color:#fff}
-    .btn-primary:hover{background:#121a2b}
-    .btn-outline{border-color:var(--line); background:#fff}
-    .btn-outline:hover{border-color:#cfd7e3; background:#f9fbff}
-    .tag{display:inline-flex; align-items:center; gap:.35rem; border:1px solid var(--line); background:#fff; padding:.35rem .6rem; border-radius:999px; font-size:.78rem; color:#334155}
-
-    /* Header */
-    .hdr{position:sticky; top:0; inset-inline:0; background:#fff; border-bottom:1px solid var(--line); z-index:50}
-    .hdr-inner{height:68px; display:flex; align-items:center; justify-content:space-between}
-    .brand{display:flex; align-items:center; gap:.6rem; font-weight:800; letter-spacing:.2px}
-    .brand-mark{width:34px; height:34px; border-radius:10px; background:linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow:var(--shadow)}
-    .nav{display:flex; align-items:center; gap:24px}
-    .nav a{font-size:.95rem; color:#3b4456}
-    .nav a:hover{color:#111827}
-    .nav-cta{margin-left:8px}
-
-    /* Hero */
-    .hero{position:relative; overflow:hidden; border-bottom:1px solid var(--line);}
-    .hero-wrap{display:grid; grid-template-columns:1.15fr .85fr; gap:40px; align-items:center; padding:72px 0}
-    .hero h1{font-size:clamp(32px, 4vw, 48px); line-height:1.1; margin:12px 0}
-    .hero p.lead{color:var(--muted); max-width:60ch}
-    .hero-illus{
-      height:100%; min-height:360px; border-radius:var(--radius);
-      background:radial-gradient(1200px 600px at -10% -10%, #e6f3ff 0, #f2fbff 30%, #ffffff 60%), conic-gradient(from 210deg at 70% 30%, #e9f2ff, #f8fffe);
-      border:1px solid var(--line); position:relative; box-shadow:var(--shadow);
-    }
-    .pulse{position:absolute; inset:auto 10% 10% auto; width:280px; height:180px; border-radius:18px; background:#0b1220; color:#fff; padding:16px; box-shadow:0 12px 30px rgba(11,18,32,.18)}
-    .pulse small{opacity:.75}
-
-    /* Sections */
-    section{padding:60px 0}
-    .section-h{display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:18px}
-    .kicker{font-size:.78rem; text-transform:uppercase; letter-spacing:.18em; color:#64748b}
-
-    /* Value props */
-    .grid{display:grid; gap:16px}
-    .g-3{grid-template-columns:repeat(3, minmax(0,1fr))}
-    .g-2{grid-template-columns:repeat(2, minmax(0,1fr))}
-    .card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:20px; transition:transform .18s ease, box-shadow .18s ease;}
-    .card:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
-    .card h3{margin:0 0 6px}
-    .meta{font-size:.9rem; color:#5c667b}
-
-    /* Solutions grid */
-    .svc{background:#fff}
-    .svc .card{background:#fff}
-    .list{margin:10px 0 0 18px; color:#334155}
-
-    /* Process */
-    .process{border:1px solid var(--line); border-radius:var(--radius); padding:8px; background:linear-gradient(#fff, #fbfdff)}
-    .step{display:grid; grid-template-columns:42px 1fr; gap:14px; padding:12px; border-radius:12px}
-    .step + .step{border-top:1px dashed var(--line)}
-    .step .dot{width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:#f1f5f9; color:#0b1220; font-weight:700}
-
-    /* Case studies */
-    .case{display:grid; gap:18px; grid-template-columns:1.2fr .8fr}
-    .case .shot{border:1px solid var(--line); border-radius:var(--radius); min-height:220px; background:linear-gradient(135deg, #eef5ff, #fafcff)}
-
-    /* CTA */
-    .cta{background:#0b1220; color:#fff; border-radius:var(--radius); padding:28px; display:flex; align-items:center; justify-content:space-between; gap:14px}
-    .cta p{opacity:.9; margin:4px 0 0}
-
-    /* Footer */
-    .ftr{border-top:1px solid var(--line);}
-    .fcols{display:grid; gap:18px; grid-template-columns:2fr repeat(3,1fr)}
-    .fcols h4{margin:0 0 8px}
-    .fcols ul{margin:0; padding:0; list-style:none}
-    .fcols li{padding:6px 0}
-    .fine{display:flex; align-items:center; justify-content:space-between; color:#6b7280; font-size:.9rem; padding:16px 0}
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero-wrap{grid-template-columns:1fr; padding:36px 0}
-      .case{grid-template-columns:1fr}
-      .g-3{grid-template-columns:1fr}
-      .g-2{grid-template-columns:1fr}
-      .fcols{grid-template-columns:1fr 1fr}
-    }
-  </style>
+  <title>Gercotronic — Clean Fiber-Optic Solutions</title>
+  <meta name="description" content="Design, installation and maintenance of fiber-optic networks across DACH & EU." />
+  <link rel="icon" href="assets/image/favicon.ico">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/app.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- Header -->
   <header class="hdr">
     <div class="container hdr-inner">
-      <a class="brand" href="#">
-        <img src="logo.png" alt="Gercotronic GmbH logo" style="height:34px;width:auto;" />
-      </a>
-      <nav class="nav">
-        <a href="#solutions">Solutions</a>
-        <a href="#products">Products</a>
-        <a href="#process">Process</a>
-        <a href="#cases">Cases</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a>
+      <a class="brand" href="index.html"><img src="assets/image/logo.png" alt="Gercotronic GmbH logo" style="height:34px;width:auto" /></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#solutions">Solutions</a>
+        <a href="products/">Products</a>
+        <a href="index.html#process">Process</a>
+        <a href="cases/">Cases</a>
+        <a href="about/">About</a>
+        <a href="index.html#contact" class="btn btn-primary nav-cta">Get a Quote</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="container hero-wrap">
-      <div>
-        <span class="tag">Trusted Fiber‑Optic Specialists</span>
-        <h1 id="hero-title">Fiber‑optic solutions for <span style="background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent">faster, smarter</span> networks.</h1>
-        <p class="lead">Design, installation and maintenance of reliable optical networks for businesses, campuses and industrial sites. Clean, simple and standards‑compliant.</p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
-          <a href="#contact" class="btn btn-primary">Get a Quote</a>
-          <a href="#solutions" class="btn btn-outline">Explore Solutions</a>
-        </div>
-        <div style="display:flex; gap:16px; margin-top:18px; color:#6b7280; font-size:.92rem">
-          <span>• Certified splicing & testing</span>
-          <span>• Documented handover</span>
-          <span>• SLA options</span>
-        </div>
-      </div>
-      <div class="hero-illus">
-        <div class="pulse">
-          <strong>Live OTDR</strong><br>
-          <small>Attenuation: 0.19 dB/km</small><br>
-          <small>Event @ 2.1 km: splice</small>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Value props -->
-  <section aria-labelledby="vp-title">
-    <div class="container">
-      <div class="section-h">
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-wrap">
         <div>
-          <div class="kicker">Why Gercotronic</div>
-          <h2 id="vp-title">Tidy installs, certified quality, rapid delivery</h2>
-        </div>
-      </div>
-      <div class="grid g-3">
-        <div class="card">
-          <h3>Turn‑key Projects</h3>
-          <p class="meta">From site survey to certification & documentation.</p>
-        </div>
-        <div class="card">
-          <h3>Certified Quality</h3>
-          <p class="meta">Standards‑compliant splicing, testing and labeling.</p>
-        </div>
-        <div class="card">
-          <h3>Rapid Deployment</h3>
-          <p class="meta">Lean processes for fast, tidy installations.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Solutions -->
-  <section id="solutions" class="svc" aria-labelledby="svc-title">
-    <div class="container">
-      <div class="section-h">
-        <div>
-          <div class="kicker">Solutions</div>
-          <h2 id="svc-title">Clean, modular services you can mix & match</h2>
-        </div>
-        <a href="#contact" class="btn btn-outline">Request proposal</a>
-      </div>
-
-      <div class="grid g-3">
-        <article class="card">
-          <h3>Fiber Design & Consulting</h3>
-          <p class="meta">Network planning, route design, BOM and standards guidance.</p>
-          <ul class="list">
-            <li>Campus & building backbones</li>
-            <li>P2P & PON architectures</li>
-            <li>Documentation & labeling</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Splicing & Termination</h3>
-          <p class="meta">Precision splicing, connectors, patch panels and ODFs.</p>
-          <ul class="list">
-            <li>Fusion splicing</li>
-            <li>Single‑mode & multi‑mode</li>
-            <li>End‑face inspection</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Testing & Certification</h3>
-          <p class="meta">OTDR, power meter, end‑face inspection and reports.</p>
-          <ul class="list">
-            <li>Attenuation & reflectance</li>
-            <li>Standards compliance</li>
-            <li>As‑built documentation</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Maintenance & Repair</h3>
-          <p class="meta">Troubleshooting, fault localization and cleanups.</p>
-          <ul class="list">
-            <li>Emergency support</li>
-            <li>Moves, Adds & Changes</li>
-            <li>SLA options</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Enclosures & Racks</h3>
-          <p class="meta">Cabinets, trays, patching and cable management.</p>
-          <ul class="list">
-            <li>ODF design</li>
-            <li>Labeling systems</li>
-            <li>Neat routing</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Wireless & Copper (optional)</h3>
-          <p class="meta">Complementary cabling and Wi‑Fi for turnkey delivery.</p>
-          <ul class="list">
-            <li>Cat6A cabling</li>
-            <li>Access point install</li>
-            <li>Rack patching</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Products teaser (optional) -->
-  <section id="products" aria-labelledby="prod-title">
-    <div class="container">
-      <div class="section-h">
-        <div>
-          <div class="kicker">Products</div>
-          <h2 id="prod-title">ODFs, patch panels, pigtails & accessories</h2>
-        </div>
-        <a href="#" class="btn btn-outline">Download catalog</a>
-      </div>
-      <div class="grid g-3">
-        <article class="card"><h3>ODF Enclosures</h3><p class="meta">12–144 fibers, front/rear access</p></article>
-        <article class="card"><h3>Patch Panels</h3><p class="meta">Rack mount, sliding trays</p></article>
-        <article class="card"><h3>Pigtails & Adapters</h3><p class="meta">LC/SC/ST, SM/MM</p></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section id="process" aria-labelledby="proc-title">
-    <div class="container">
-      <div class="section-h">
-        <div>
-          <div class="kicker">How we work</div>
-          <h2 id="proc-title">A tidy, documented process end‑to‑end</h2>
-        </div>
-      </div>
-      <div class="process">
-        <div class="step"><div class="dot">1</div><div><strong>Site survey & scope</strong><div class="meta">Site walk‑through, fiber routes, risk notes.</div></div></div>
-        <div class="step"><div class="dot">2</div><div><strong>Design & BOM</strong><div class="meta">Topology, labeling scheme, bill of materials.</div></div></div>
-        <div class="step"><div class="dot">3</div><div><strong>Install & splice</strong><div class="meta">Neat routing, cabinets, trays and patching.</div></div></div>
-        <div class="step"><div class="dot">4</div><div><strong>Test & certify</strong><div class="meta">OTDR & power meter results, acceptance docs.</div></div></div>
-        <div class="step"><div class="dot">5</div><div><strong>Handover & support</strong><div class="meta">As‑built, labels, SLA options.</div></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Cases -->
-  <section id="cases" aria-labelledby="case-title">
-    <div class="container">
-      <div class="section-h">
-        <div>
-          <div class="kicker">Case studies</div>
-          <h2 id="case-title">Recent deployments</h2>
-        </div>
-      </div>
-      <div class="case card">
-        <div class="shot" aria-hidden="true"></div>
-        <div>
-          <h3>Campus backbone refresh — Bremen</h3>
-          <p class="meta">Upgraded to SM PON with labeled trays; OTDR avg 0.21 dB/km; completed in 10 days with after‑hours cutover.</p>
-          <ul class="list">
-            <li>144F single‑mode, LC duplex</li>
-            <li>12 ODFs across 4 buildings</li>
-            <li>Handover pack: PDFs + label map</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About / Contact band -->
-  <section id="about" aria-labelledby="about-title">
-    <div class="container">
-      <div class="grid g-2">
-        <div class="card">
-          <h2 id="about-title">About Gercotronic</h2>
-          <p class="meta">We’re a specialist team focused on neat, standards‑compliant fiber deployments. Proper labeling and documentation are non‑negotiable, so your network stays maintainable.</p>
-          <div class="grid g-2">
-            <div><div class="meta">Founded</div><strong>2025</strong></div>
-            <div><div class="meta">HQ</div><strong>Germany</strong></div>
-            <div><div class="meta">Response time</div><strong>< 24h</strong></div>
-            <div><div class="meta">Coverage</div><strong>DACH & EU</strong></div>
+          <span class="tag">Trusted Fiber-Optic Specialists</span>
+          <h1 id="hero-title">Fiber-optic solutions for
+            <span class="grad">faster, smarter</span> networks.</h1>
+          <p class="lead">Design, installation and maintenance of reliable optical networks for businesses, campuses and industrial sites. Clean, simple and standards-compliant.</p>
+          <div class="btn-row">
+            <a href="index.html#contact" class="btn btn-primary">Get a Quote</a>
+            <a href="index.html#solutions" class="btn btn-outline">Explore Solutions</a>
+          </div>
+          <div class="hero-bullets">
+            <span>• Certified splicing & testing</span>
+            <span>• Documented handover</span>
+            <span>• SLA options</span>
           </div>
         </div>
-        <div class="card" id="contact">
-          <h2>Contact</h2>
-          <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Sent ✓'; this.querySelector('button').style.background= getComputedStyle(document.documentElement).getPropertyValue('--success');">
-            <div style="display:grid; gap:10px">
-              <label> Name<br><input required type="text" placeholder="Your name" style="width:100%; padding:10px 12px; border-radius:10px; border:1px solid var(--line)"></label>
-              <label> Email<br><input required type="email" placeholder="you@company.com" style="width:100%; padding:10px 12px; border-radius:10px; border:1px solid var(--line)"></label>
-              <label> Project details<br><textarea rows="4" placeholder="Location, timeline, scope…" style="width:100%; padding:10px 12px; border-radius:10px; border:1px solid var(--line)"></textarea></label>
-              <button class="btn btn-primary" type="submit">Send</button>
-            </div>
-          </form>
-          <div class="meta" style="margin-top:10px">Or email: hello@gercotronic.com · +49 2103 5725140</div>
+        <div class="hero-illus">
+          <div class="pulse">
+            <strong>Live OTDR</strong><br>
+            <small>Attenuation: 0.19 dB/km</small><br>
+            <small>Event @ 2.1 km: splice</small>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Bottom CTA -->
-  <section aria-label="Request a quote" style="padding-top:0">
-    <div class="container">
-      <div class="cta">
-        <div>
-          <strong>Ready to discuss your project?</strong>
-          <p>Send a brief and we’ll get back within one business day.</p>
+    <!-- Value props -->
+    <section aria-labelledby="vp-title">
+      <div class="container">
+        <div class="section-h">
+          <div>
+            <div class="kicker">Why Gercotronic</div>
+            <h2 id="vp-title">Tidy installs, certified quality, rapid delivery</h2>
+          </div>
         </div>
-        <a href="#contact" class="btn" style="background:#fff; color:#0b1220">Get a Quote</a>
+        <div class="grid g-3">
+          <div class="card"><h3>Turn-key Projects</h3><p class="meta">From site survey to certification & documentation.</p></div>
+          <div class="card"><h3>Certified Quality</h3><p class="meta">Standards-compliant splicing, testing and labeling.</p></div>
+          <div class="card"><h3>Rapid Deployment</h3><p class="meta">Lean processes for fast, tidy installations.</p></div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Solutions -->
+    <section id="solutions" class="svc" aria-labelledby="svc-title">
+      <div class="container">
+        <div class="section-h">
+          <div>
+            <div class="kicker">Solutions</div>
+            <h2 id="svc-title">Clean, modular services you can mix & match</h2>
+          </div>
+          <a href="index.html#contact" class="btn btn-outline">Request proposal</a>
+        </div>
+
+        <div class="grid g-3">
+          <article class="card">
+            <h3>Fiber Design & Consulting</h3>
+            <p class="meta">Network planning, route design, BOM and standards guidance.</p>
+            <ul class="list"><li>Campus & building backbones</li><li>P2P & PON architectures</li><li>Documentation & labeling</li></ul>
+          </article>
+          <article class="card">
+            <h3>Splicing & Termination</h3>
+            <p class="meta">Precision splicing, connectors, patch panels and ODFs.</p>
+            <ul class="list"><li>Fusion splicing</li><li>Single-mode & multi-mode</li><li>End-face inspection</li></ul>
+          </article>
+          <article class="card">
+            <h3>Testing & Certification</h3>
+            <p class="meta">OTDR, power meter, end-face inspection and reports.</p>
+            <ul class="list"><li>Attenuation & reflectance</li><li>Standards compliance</li><li>As-built documentation</li></ul>
+          </article>
+          <article class="card">
+            <h3>Maintenance & Repair</h3>
+            <p class="meta">Troubleshooting, fault localization and cleanups.</p>
+            <ul class="list"><li>Emergency support</li><li>Moves, Adds & Changes</li><li>SLA options</li></ul>
+          </article>
+          <article class="card">
+            <h3>Enclosures & Racks</h3>
+            <p class="meta">Cabinets, trays, patching and cable management.</p>
+            <ul class="list"><li>ODF design</li><li>Labeling systems</li><li>Neat routing</li></ul>
+          </article>
+          <article class="card">
+            <h3>Wireless & Copper (optional)</h3>
+            <p class="meta">Complementary cabling and Wi-Fi for turnkey delivery.</p>
+            <ul class="list"><li>Cat6A cabling</li><li>Access point install</li><li>Rack patching</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products teaser -->
+    <section id="products" aria-labelledby="prod-title">
+      <div class="container">
+        <div class="section-h">
+          <div>
+            <div class="kicker">Products</div>
+            <h2 id="prod-title">ODFs, patch panels, pigtails & accessories</h2>
+          </div>
+          <a href="products/" class="btn btn-outline">Browse catalog</a>
+        </div>
+        <div class="grid g-3">
+          <article class="card"><h3>ODF Enclosures</h3><p class="meta">12–144 fibers, front/rear access</p></article>
+          <article class="card"><h3>Patch Panels</h3><p class="meta">Rack mount, sliding trays</p></article>
+          <article class="card"><h3>Pigtails & Adapters</h3><p class="meta">LC/SC/ST, SM/MM</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" aria-labelledby="proc-title">
+      <div class="container">
+        <div class="section-h"><div><div class="kicker">How we work</div><h2 id="proc-title">A tidy, documented process end-to-end</h2></div></div>
+        <div class="process">
+          <div class="step"><div class="dot">1</div><div><strong>Site survey & scope</strong><div class="meta">Site walk-through, fiber routes, risk notes.</div></div></div>
+          <div class="step"><div class="dot">2</div><div><strong>Design & BOM</strong><div class="meta">Topology, labeling scheme, bill of materials.</div></div></div>
+          <div class="step"><div class="dot">3</div><div><strong>Install & splice</strong><div class="meta">Neat routing, cabinets, trays and patching.</div></div></div>
+          <div class="step"><div class="dot">4</div><div><strong>Test & certify</strong><div class="meta">OTDR & power meter results, acceptance docs.</div></div></div>
+          <div class="step"><div class="dot">5</div><div><strong>Handover & support</strong><div class="meta">As-built, labels, SLA options.</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases -->
+    <section id="cases" aria-labelledby="case-title">
+      <div class="container">
+        <div class="section-h"><div><div class="kicker">Case studies</div><h2 id="case-title">Recent deployments</h2></div></div>
+        <div class="case card">
+          <div class="shot" aria-hidden="true"></div>
+          <div>
+            <h3>Campus backbone refresh — Bremen</h3>
+            <p class="meta">Upgraded to SM PON with labeled trays; OTDR avg 0.21 dB/km; completed in 10 days with after-hours cutover.</p>
+            <ul class="list"><li>144F single-mode, LC duplex</li><li>12 ODFs across 4 buildings</li><li>Handover pack: PDFs + label map</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Contact -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="grid g-2">
+          <div class="card">
+            <h2 id="about-title">About Gercotronic</h2>
+            <p class="meta">We’re a specialist team focused on neat, standards-compliant fiber deployments. Proper labeling and documentation are non-negotiable, so your network stays maintainable.</p>
+            <div class="grid g-2 facts">
+              <div><div class="meta">Founded</div><strong>2025</strong></div>
+              <div><div class="meta">HQ</div><strong>Germany</strong></div>
+              <div><div class="meta">Response time</div><strong>&lt; 24h</strong></div>
+              <div><div class="meta">Coverage</div><strong>DACH & EU</strong></div>
+            </div>
+          </div>
+          <div class="card" id="contact">
+            <h2>Contact</h2>
+            <form class="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
+              <div class="form-grid">
+                <label> Name<br><input required name="name" type="text" placeholder="Your name"></label>
+                <label> Email<br><input required name="email" type="email" placeholder="you@company.com"></label>
+                <label> Project details<br><textarea name="message" rows="4" placeholder="Location, timeline, scope…"></textarea></label>
+                <button class="btn btn-primary" type="submit">Send</button>
+              </div>
+              <p class="form-status" aria-live="polite"></p>
+            </form>
+            <div class="meta" style="margin-top:10px">Or email: hello@gercotronic.com · +49 2103 5725140</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section aria-label="Request a quote" style="padding-top:0">
+      <div class="container">
+        <div class="cta">
+          <div><strong>Ready to discuss your project?</strong><p>Send a brief and we’ll get back within one business day.</p></div>
+          <a href="index.html#contact" class="btn btn-light">Get a Quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="ftr" aria-label="Site footer">
     <div class="container" style="padding:34px 0">
       <div class="fcols">
         <div>
-          <div class="brand" style="margin-bottom:10px"><img src="logo.png" alt="Gercotronic GmbH logo" style="height:34px;width:auto;" /></div>
-          <p class="meta">Clean fiber‑optic solutions. We deliver tidy installs with complete documentation.</p>
+          <div class="brand" style="margin-bottom:10px"><img src="assets/image/logo.png" alt="Gercotronic GmbH logo" style="height:34px;width:auto" /></div>
+          <p class="meta">Clean fiber-optic solutions. We deliver tidy installs with complete documentation.</p>
         </div>
         <div>
           <h4>Company</h4>
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#cases">Cases</a></li>
+            <li><a href="about/">About</a></li>
+            <li><a href="index.html#process">Process</a></li>
+            <li><a href="cases/">Cases</a></li>
           </ul>
         </div>
         <div>
           <h4>Services</h4>
           <ul>
-            <li><a href="#solutions">Design & Consulting</a></li>
-            <li><a href="#solutions">Splicing</a></li>
-            <li><a href="#solutions">Testing & Certification</a></li>
+            <li><a href="index.html#solutions">Design & Consulting</a></li>
+            <li><a href="index.html#solutions">Splicing</a></li>
+            <li><a href="index.html#solutions">Testing & Certification</a></li>
           </ul>
         </div>
         <div>
           <h4>Legal</h4>
           <ul>
-            <li><a href="#">Imprint</a></li>
-            <li><a href="#">Privacy</a></li>
+            <li><a href="legal/imprint.html">Imprint</a></li>
+            <li><a href="legal/privacy.html">Privacy</a></li>
           </ul>
         </div>
       </div>
@@ -397,10 +247,5 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
-
