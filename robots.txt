@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Sitemap: https://bakk0u.github.io/gercotronic-preview/sitemap.xml
