@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/gercotronic-preview/">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Page not found — Gercotronic</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/image/favicon.ico">
+</head>
+<body>
+  <header class="hdr">
+    <div class="container hdr-inner">
+      <a class="brand" href="index.html"><img src="assets/image/logo.png" alt="Gercotronic GmbH logo" style="height:34px"></a>
+      <nav class="nav">
+        <a href="index.html#solutions">Solutions</a>
+        <a href="products/">Products</a>
+        <a href="index.html#process">Process</a>
+        <a href="cases/">Cases</a>
+        <a href="about/">About</a>
+        <a href="index.html#contact" class="btn btn-primary nav-cta">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Page not found</h1>
+        <p class="lead">The link may be broken or the page was moved.</p>
+        <div class="btn-row" style="margin-top:18px">
+          <a class="btn btn-primary" href="index.html">Back to homepage</a>
+          <a class="btn btn-outline" href="cases/">See recent deployments</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ftr">
+    <div class="container" style="padding:34px 0">
+      <div class="fine">
+        <span>© <span id="y"></span> Gercotronic</span>
+        <span><a href="legal/imprint.html">Imprint</a> · <a href="legal/privacy.html">Privacy</a></span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const y=document.getElementById('y'); if(y) y.textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
