@@ -1,119 +1,300 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Base for GitHub Pages project site -->
   <base href="/gercotronic-preview/">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Gercotronic — Fiber-Optic Solutions</title>
-  <meta name="description" content="Design, installation and maintenance of fiber-optic networks across DACH & EU.">
+
+  <title>Gercotronic — Fiber-Optic Engineering for Business, Campus & Industry</title>
+  <meta name="description" content="Gercotronic designs, installs, and certifies clean, standards-compliant fiber-optic networks across DACH & EU.">
+  <meta name="robots" content="index,follow">
+
+  <!-- Social (update og:image later if you have one) -->
+  <meta property="og:title" content="Gercotronic — Fiber-Optic Engineering">
+  <meta property="og:description" content="Clean, documented fiber deployments with measurable results.">
+  <meta property="og:url" content="https://bakk0u.github.io/gercotronic-preview/">
+  <meta property="og:type" content="website">
+
   <link rel="icon" href="assets/image/favicon.ico">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script defer src="assets/js/app.js"></script>
+
+  <!-- ====== In-file CSS: bespoke, professional, human-coded ====== -->
+  <style>
+    /* ------------ Base & Tokens ------------ */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    html:focus-within{scroll-behavior:smooth}
+    body{
+      margin:0; background:#ffffff; color:#0b152d; line-height:1.65;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    img,svg,video{display:block;max-width:100%;height:auto}
+    a{text-decoration:none;color:inherit}
+    button,input,textarea,select{font:inherit;color:inherit}
+
+    :root{
+      /* Brand system (navy + vivid blue; subtle teal accent) */
+      --ink:#0b152d;          /* primary text */
+      --muted:#475569;        /* long copy */
+      --line:#e6eaf2;         /* hairline */
+      --soft:#f6f9ff;         /* section bg */
+      --brand:#2563ff;        /* blue primary */
+      --brand-ink:#1e4fe0;    /* hover/darken */
+      --accent:#00c2a8;       /* accent sparingly */
+      --container:1140px;
+      --r:14px;
+
+      --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:20px; --s6:24px;
+      --s7:32px; --s8:40px; --s9:56px; --s10:72px;
+    }
+
+    /* ------------ Layout primitives ------------ */
+    .container{max-width:var(--container); margin-inline:auto; padding-inline:22px}
+    .stack > * + *{margin-top:var(--s5)}
+    .cluster{display:flex; gap:var(--s4); align-items:center; flex-wrap:wrap}
+    .grid{display:grid; gap:var(--s6)}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .section{padding-block:var(--s9)}
+    .soft{background:var(--soft)}
+    .divide{height:1px; background:var(--line); margin:var(--s8) 0}
+
+    /* ------------ Typography ------------ */
+    h1,h2,h3{line-height:1.2; margin:0 0 var(--s4)}
+    h1{font-size:clamp(36px,4.6vw,50px); font-weight:800; color:var(--ink)}
+    h2{font-size:clamp(24px,3vw,32px); font-weight:750; color:var(--ink)}
+    h3{font-size:1.12rem; font-weight:700}
+    .lead{color:var(--muted); max-width:72ch}
+    .meta{color:var(--muted); font-size:.97rem}
+    .kicker{letter-spacing:.14em; text-transform:uppercase; font-size:.78rem; color:#64748b}
+
+    /* ------------ Header / Nav ------------ */
+    .skip-link{position:absolute; left:-9999px}
+    .skip-link:focus{left:16px; top:12px; background:#111827; color:#fff; padding:.5rem .75rem; border-radius:8px}
+    .hdr{position:sticky; top:0; z-index:50; background:#fff; border-bottom:1px solid var(--line)}
+    .hdr-inner{height:76px; display:flex; align-items:center; justify-content:space-between}
+    .logo img{height:34px}
+    .nav{display:flex; gap:26px; align-items:center}
+    .nav a{color:#334155; position:relative}
+    .nav a:hover{color:var(--ink)}
+    .nav a::after{content:""; position:absolute; left:0; right:0; bottom:-8px; height:2px; background:transparent; transition:background .2s}
+    .nav a:hover::after{background:var(--brand)}
+    .nav .btn{margin-left:8px}
+
+    /* ------------ Buttons & Cards ------------ */
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:.55rem;
+      padding:.78rem 1.05rem; border:1px solid var(--line); border-radius:10px;
+      background:#fff; color:var(--ink); font-weight:600; transition:.15s ease;
+    }
+    .btn:hover{background:#f8fbff; border-color:#cbd5e1}
+    .btn:active{transform:translateY(1px)}
+    .btn-primary{background:var(--brand); border-color:var(--brand); color:#fff}
+    .btn-primary:hover{background:var(--brand-ink)}
+    .btn-ghost{background:transparent; border-color:transparent}
+    .badge{display:inline-flex; gap:.45rem; align-items:center; border:1px solid var(--line); border-radius:999px; padding:.34rem .62rem; background:#fff; color:#334155; font-size:.83rem}
+    .card{border:1px solid var(--line); background:#fff; border-radius:var(--r); padding:var(--s6)}
+    .card:hover{box-shadow:0 10px 30px rgba(2,6,23,.06)}
+
+    /* ------------ Hero (new layout) ------------ */
+    .hero{background:linear-gradient(180deg,#ffffff 0,#f8fbff 100%); border-bottom:1px solid var(--line)}
+    .hero-wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:var(--s8); align-items:center; padding-block:var(--s10)}
+    .hero-lead{border-left:6px solid var(--brand); padding-left:var(--s6)}
+    .hero-visual{position:relative; min-height:380px; border:1px solid var(--line); border-radius:16px;
+      background:
+        radial-gradient(1000px 480px at -20% -10%, #e8f1ff 0, #ffffff 48%),
+        linear-gradient(0deg,#e6fffb22,#e6fffb22);
+      overflow:hidden;
+    }
+    .hero-chip{position:absolute; right:16px; bottom:16px; background:#0b152d; color:#fff; border-radius:10px; padding:10px 12px; font-size:.85rem}
+    .hero-stats{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--s6); margin-top:var(--s6)}
+    .stat{padding:var(--s5); border:1px dashed var(--line); border-radius:12px; background:#fff}
+    .stat strong{display:block; font-size:1.25rem}
+
+    /* ------------ Solutions ------------ */
+    .section-head{display:flex; align-items:flex-end; justify-content:space-between; gap:var(--s4); margin-bottom:var(--s6)}
+
+    /* ------------ Process timeline ------------ */
+    .timeline{display:grid; gap:var(--s4)}
+    .step{display:grid; grid-template-columns:42px 1fr; gap:var(--s4); align-items:start; padding:var(--s5); border:1px solid var(--line); border-radius:12px; background:#fff}
+    .dot{width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:#eef3ff; color:#0b152d; font-weight:700}
+
+    /* ------------ CTA band ------------ */
+    .cta{background:#0b152d; color:#fff; border-radius:16px; padding:var(--s7); display:flex; align-items:center; justify-content:space-between; gap:var(--s5)}
+    .cta p{opacity:.9; margin:0}
+
+    /* ------------ Footer ------------ */
+    .ftr{border-top:1px solid var(--line)}
+    .fcols{display:grid; gap:var(--s6); grid-template-columns:2fr repeat(3,1fr)}
+    .fine{display:flex; align-items:center; justify-content:space-between; color:#6b7280; font-size:.95rem; padding-block:16px}
+
+    /* ------------ Responsive ------------ */
+    @media (max-width: 980px){
+      .hero-wrap{grid-template-columns:1fr; padding-block:var(--s8)}
+      .grid-3,.grid-2{grid-template-columns:1fr}
+      .hero-stats{grid-template-columns:1fr 1fr}
+      .fcols{grid-template-columns:1fr 1fr}
+      .cta{flex-direction:column; align-items:flex-start}
+    }
+    @media (max-width: 640px){
+      .hero-stats{grid-template-columns:1fr}
+      .fcols{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="logo" href="index.html"><img src="assets/image/logo.png" alt="Gercotronic GmbH logo"></a>
-      <nav class="nav" aria-label="Main">
+  <!-- Header -->
+  <header class="hdr" aria-label="Site header">
+    <div class="container hdr-inner">
+      <a class="logo" href="index.html" aria-label="Gercotronic home">
+        <img src="assets/image/logo.png" alt="Gercotronic logo">
+      </a>
+      <nav class="nav" aria-label="Primary">
         <a href="index.html#solutions">Solutions</a>
         <a href="products/">Products</a>
         <a href="cases/">Cases</a>
         <a href="about/">About</a>
-        <a href="index.html#contact" class="btn btn--primary">Get a Quote</a>
+        <a href="index.html#contact" class="btn btn-primary">Get a Quote</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero__wrap">
-        <div class="hero__lead stack">
-          <span class="badge">Trusted fiber specialists</span>
-          <h1>Faster, smarter fiber-optic networks</h1>
-          <p class="lead">We design, install and certify clean, standards-compliant optical infrastructure for businesses, campuses and industrial sites.</p>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-wrap">
+        <div class="hero-lead stack">
+          <span class="badge">Fiber-Optic Engineering</span>
+          <h1 id="hero-title">Fiber networks built clean, certified, and ready to scale.</h1>
+          <p class="lead">We design, install and document standards-compliant optical infrastructure for businesses, campuses and industrial sites across DACH & EU.</p>
           <div class="cluster">
-            <a href="index.html#contact" class="btn btn--primary">Request a quote</a>
-            <a href="index.html#solutions" class="btn">Explore solutions</a>
+            <a class="btn btn-primary" href="index.html#contact">Request a quote</a>
+            <a class="btn" href="index.html#solutions">See how we work</a>
           </div>
-          <p class="meta">Splicing & testing · As-built docs · SLA options</p>
+
+          <div class="hero-stats" role="list" aria-label="Highlights">
+            <div class="stat" role="listitem"><strong>0.21 dB/km</strong><span class="meta">Typical OTDR avg</span></div>
+            <div class="stat" role="listitem"><strong>&lt; 24h</strong><span class="meta">Response on business days</span></div>
+            <div class="stat" role="listitem"><strong>144F+</strong><span class="meta">High-density ODF builds</span></div>
+          </div>
         </div>
-        <div class="hero__visual" aria-hidden="true">
-          <div class="hero__chip">OTDR live • 0.19 dB/km</div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Decorative “engineering card” -->
+          <div class="hero-chip">Live trace · splice @ 2.1 km · pass</div>
         </div>
       </div>
     </section>
 
-    <!-- Solutions -->
-    <section id="solutions" class="section">
+    <!-- SOLUTIONS -->
+    <section id="solutions" class="section" aria-labelledby="solutions-title">
       <div class="container">
-        <div class="section__head">
+        <div class="section-head">
           <div class="stack">
-            <span class="kicker">Services</span>
-            <h2>What we deliver</h2>
+            <span class="kicker">Solutions</span>
+            <h2 id="solutions-title">Clean, modular services you can mix & match</h2>
           </div>
-          <a href="products/" class="btn">Browse products</a>
+          <a class="btn btn-ghost" href="products/">Browse products</a>
         </div>
+
         <div class="grid grid-3">
-          <article class="card stack"><h3>Design & Consulting</h3><p class="meta">Planning, route design, BOM and standards guidance.</p></article>
-          <article class="card stack"><h3>Splicing & Termination</h3><p class="meta">Precision splicing, connectors and patch panels.</p></article>
-          <article class="card stack"><h3>Testing & Certification</h3><p class="meta">OTDR, power meter testing and acceptance reports.</p></article>
-          <article class="card stack"><h3>Maintenance & Repair</h3><p class="meta">Troubleshooting, fault localization and cleanups.</p></article>
-          <article class="card stack"><h3>Enclosures & Racks</h3><p class="meta">Cabinets, trays, patching and cable management.</p></article>
-          <article class="card stack"><h3>Wireless & Copper</h3><p class="meta">Cat6A cabling and Wi-Fi to complement fiber.</p></article>
+          <article class="card stack">
+            <h3>Design & Consulting</h3>
+            <p class="meta">Network planning, route design, BOM and standards guidance.</p>
+          </article>
+          <article class="card stack">
+            <h3>Splicing & Termination</h3>
+            <p class="meta">Fusion splicing, connectors, patch panels and ODFs.</p>
+          </article>
+          <article class="card stack">
+            <h3>Testing & Certification</h3>
+            <p class="meta">OTDR, power meter testing, end-face inspection and reports.</p>
+          </article>
+          <article class="card stack">
+            <h3>Maintenance & Repair</h3>
+            <p class="meta">Troubleshooting, fault localization and cleanups.</p>
+          </article>
+          <article class="card stack">
+            <h3>Enclosures & Racks</h3>
+            <p class="meta">Cabinets, trays, labeling and cable management.</p>
+          </article>
+          <article class="card stack">
+            <h3>Wireless & Copper</h3>
+            <p class="meta">Complementary Cat6A and Wi-Fi for turnkey delivery.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Process (soft bg) -->
-    <section id="process" class="section soft">
+    <!-- PROCESS -->
+    <section id="process" class="section soft" aria-labelledby="process-title">
       <div class="container">
         <div class="stack">
           <span class="kicker">Process</span>
-          <h2>From scope to handover</h2>
+          <h2 id="process-title">A tidy, documented approach end-to-end</h2>
         </div>
-        <div class="grid grid-3" style="margin-top:var(--s6)">
-          <div class="card stack"><h3>1. Site survey</h3><p class="meta">Walk-through, routes and risks.</p></div>
-          <div class="card stack"><h3>2. Design & BOM</h3><p class="meta">Topology, labeling, bill of materials.</p></div>
-          <div class="card stack"><h3>3. Install & splice</h3><p class="meta">Neat routing, cabinets and patching.</p></div>
-          <div class="card stack"><h3>4. Test & certify</h3><p class="meta">OTDR & power meter, acceptance docs.</p></div>
-          <div class="card stack"><h3>5. Handover</h3><p class="meta">As-built pack, label map, SLA options.</p></div>
+
+        <div class="timeline" style="margin-top:var(--s6)">
+          <div class="step"><div class="dot">1</div><div><strong>Site survey & scope</strong><div class="meta">Walk-through, routes, risks and constraints.</div></div></div>
+          <div class="step"><div class="dot">2</div><div><strong>Design & BOM</strong><div class="meta">Topology, labeling scheme, bill of materials.</div></div></div>
+          <div class="step"><div class="dot">3</div><div><strong>Install & splice</strong><div class="meta">Neat routing, cabinets, trays and patching.</div></div></div>
+          <div class="step"><div class="dot">4</div><div><strong>Test & certify</strong><div class="meta">OTDR & power meter results, acceptance docs.</div></div></div>
+          <div class="step"><div class="dot">5</div><div><strong>Handover & support</strong><div class="meta">As-built pack, label map, SLA options.</div></div></div>
         </div>
       </div>
     </section>
 
-    <!-- Case teaser -->
-    <section class="section">
+    <!-- CASE TEASER -->
+    <section class="section" aria-labelledby="cases-title">
       <div class="container">
         <div class="stack">
           <span class="kicker">Case studies</span>
-          <h2>Recent deployments</h2>
+          <h2 id="cases-title">Recent deployments</h2>
         </div>
+
         <div class="card stack" style="margin-top:var(--s6)">
           <h3>Campus backbone — Bremen</h3>
-          <p class="meta">144F SM, LC duplex; OTDR avg 0.21 dB/km; 10-day after-hours cutover.</p>
+          <p class="meta">Upgraded to SM PON with labeled trays; OTDR avg 0.21 dB/km; completed in 10 days with after-hours cutover.</p>
+          <ul class="meta">
+            <li>144F single-mode, LC duplex</li>
+            <li>12 ODFs across 4 buildings</li>
+            <li>Handover pack: PDFs + label map</li>
+          </ul>
+          <div class="cluster">
+            <a class="btn" href="cases/">See all case studies</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
       <div class="container grid grid-2">
         <div class="card stack">
-          <h2>Contact</h2>
-          <form class="form" action="https://formspree.io/f/your_form_id" method="POST">
-            <label> Name<br><input class="input" required name="name" type="text" placeholder="Your name"></label>
-            <label> Email<br><input class="input" required name="email" type="email" placeholder="you@company.com"></label>
-            <label> Message<br><textarea class="textarea" name="message" placeholder="Location, timeline, scope…"></textarea></label>
-            <button class="btn btn--primary" type="submit">Send</button>
+          <h2 id="contact-title">Contact</h2>
+          <form class="stack" action="https://formspree.io/f/your_form_id" method="POST">
+            <label> Name<br><input required class="input" type="text" name="name" placeholder="Your name"></label>
+            <label> Email<br><input required class="input" type="email" name="email" placeholder="you@company.com"></label>
+            <label> Project details<br><textarea class="input" rows="4" name="message" placeholder="Location, timeline, scope…"></textarea></label>
+            <button class="btn btn-primary" type="submit">Send</button>
           </form>
           <p class="meta">hello@gercotronic.com · +49 2103 5725140</p>
         </div>
+
         <div class="stack">
-          <h2>About</h2>
-          <p class="meta">Specialists in neat, standards-compliant fiber deployments. Proper labeling and documentation keep your network maintainable.</p>
+          <div class="cta">
+            <div class="stack" style="margin:0">
+              <strong style="font-size:1.15rem">Ready to discuss your project?</strong>
+              <p>Send a brief and we’ll get back within one business day.</p>
+            </div>
+            <a class="btn" style="background:#fff;color:#0b152d;border-color:#fff" href="index.html#contact">Get a quote</a>
+          </div>
+
+          <div class="divide"></div>
+
           <div class="grid grid-2">
             <div class="stack"><div class="meta">Founded</div><strong>2025</strong></div>
             <div class="stack"><div class="meta">HQ</div><strong>Germany</strong></div>
@@ -125,42 +306,79 @@
     </section>
   </main>
 
-  <footer class="site-footer" aria-label="Site footer">
+  <!-- Footer -->
+  <footer class="ftr" aria-label="Site footer">
     <div class="container" style="padding-block:34px">
-      <div class="footer-grid">
+      <div class="fcols">
         <div class="stack">
-          <a class="logo" href="index.html"><img src="assets/image/logo.png" alt="Gercotronic GmbH logo"></a>
+          <a class="logo" href="index.html"><img src="assets/image/logo.png" alt="Gercotronic logo"></a>
           <p class="meta">Clean fiber-optic solutions with complete documentation.</p>
         </div>
         <div>
-          <h4>Company</h4>
-          <ul class="meta">
+          <h3 style="font-size:1rem;margin:0 0 var(--s3)">Company</h3>
+          <ul class="meta" style="list-style:none; padding:0; margin:0">
             <li><a href="about/">About</a></li>
             <li><a href="cases/">Cases</a></li>
             <li><a href="index.html#process">Process</a></li>
           </ul>
         </div>
         <div>
-          <h4>Services</h4>
-          <ul class="meta">
+          <h3 style="font-size:1rem;margin:0 0 var(--s3)">Services</h3>
+          <ul class="meta" style="list-style:none; padding:0; margin:0">
             <li><a href="index.html#solutions">Design & Consulting</a></li>
             <li><a href="index.html#solutions">Splicing</a></li>
             <li><a href="index.html#solutions">Testing & Certification</a></li>
           </ul>
         </div>
         <div>
-          <h4>Legal</h4>
-          <ul class="meta">
+          <h3 style="font-size:1rem;margin:0 0 var(--s3)">Legal</h3>
+          <ul class="meta" style="list-style:none; padding:0; margin:0">
             <li><a href="legal/imprint.html">Imprint</a></li>
             <li><a href="legal/privacy.html">Privacy</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-fine">
+      <div class="fine">
         <span>© <span id="y"></span> Gercotronic</span>
         <span>DACH & EU</span>
       </div>
     </div>
   </footer>
+
+  <!-- Tiny, human-written JS -->
+  <script>
+    // Year
+    (function(){var y=document.getElementById('y'); if(y) y.textContent=new Date().getFullYear();})();
+
+    // Active nav (basic path match)
+    (function(){
+      var nav=document.querySelector('.nav'); if(!nav) return;
+      var here=location.pathname.replace(/\/+$/,'');
+      Array.prototype.forEach.call(nav.querySelectorAll('a'), function(a){
+        var p=new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+        if(p===here || (p.endsWith('/index.html') && (here.endsWith('/')||here.endsWith('/index.html')))){
+          a.classList.add('active');
+        }
+      });
+    })();
+  </script>
+
+  <!-- Optional: Organization JSON-LD (can keep or remove) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Gercotronic GmbH",
+    "url": "https://bakk0u.github.io/gercotronic-preview/",
+    "logo": "https://bakk0u.github.io/gercotronic-preview/assets/image/logo.png",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "hello@gercotronic.com",
+      "telephone": "+49 2103 5725140",
+      "areaServed": "EU"
+    }]
+  }
+  </script>
 </body>
 </html>
