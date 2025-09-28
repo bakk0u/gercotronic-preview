@@ -2,13 +2,13 @@
 const y = document.getElementById('y');
 if (y) y.textContent = new Date().getFullYear();
 
-// Highlight active nav on subpages (simple path match)
-(function navActive(){
-  const nav = document.querySelector('.nav'); if (!nav) return;
-  const path = location.pathname.replace(/\/+$/, '');
-  [...nav.querySelectorAll('a')].forEach(a => {
-    const href = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/, '');
-    if (href === path || (href.endsWith('/index.html') && (path.endsWith('/') || path.endsWith('/index.html')))) {
+// Mark active nav (basic path match)
+(function(){
+  const nav = document.querySelector('.nav'); if(!nav) return;
+  const here = location.pathname.replace(/\/+$/,'');
+  [...nav.querySelectorAll('a')].forEach(a=>{
+    const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+    if (path === here || (path.endsWith('/index.html') && (here.endsWith('/') || here.endsWith('/index.html')))) {
       a.classList.add('active');
     }
   });
