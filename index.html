@@ -1,23 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/gercotronic-preview/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Gercotronic — Fiber-Optic Solutions</title>
-  <meta name="description" content="Gercotronic designs, installs, and maintains fiber-optic networks across DACH & EU.">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta name="description" content="Gercotronic designs, installs and maintains fiber-optic networks across DACH & EU.">
+  <meta name="robots" content="index,follow">
   <link rel="icon" href="assets/image/favicon.ico">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/app.js"></script>
+  <!-- Open Graph (optional image can be added later) -->
+  <meta property="og:title" content="Gercotronic — Fiber-Optic Solutions">
+  <meta property="og:description" content="Clean, documented, standards-compliant fiber deployments for business, campus and industry.">
+  <meta property="og:url" content="https://bakk0u.github.io/gercotronic-preview/">
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Header -->
   <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="assets/image/logo.png" alt="Gercotronic GmbH logo">
-      </a>
-      <nav class="nav" aria-label="Main navigation">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html"><img src="assets/image/logo.png" alt="Gercotronic GmbH logo"></a>
+      <nav class="nav" aria-label="Main">
         <a href="index.html#solutions">Solutions</a>
         <a href="products/">Products</a>
         <a href="cases/">Cases</a>
@@ -28,74 +33,154 @@
   </header>
 
   <main id="main">
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
-      <div class="container">
-        <h1>Fiber-optic solutions for faster, smarter networks</h1>
-        <p>We deliver clean, documented, and standards-compliant fiber installations for businesses, campuses, and industry.</p>
-        <a href="index.html#contact" class="btn btn-primary">Request a Quote</a>
+      <div class="container hero__wrap">
+        <div class="stack">
+          <span class="badge">Trusted Fiber Specialists</span>
+          <h1>Fiber-optic solutions for faster, smarter networks</h1>
+          <p class="lead">We deliver clean, documented and standards-compliant fiber installations for businesses, campuses and industry across DACH & EU.</p>
+          <div class="cluster">
+            <a href="index.html#contact" class="btn btn-primary">Request a Quote</a>
+            <a href="index.html#solutions" class="btn">Explore Solutions</a>
+          </div>
+          <div class="meta">Certified splicing & testing · Documented handover · SLA options</div>
+        </div>
+        <div class="hero__visual" aria-hidden="true"></div>
       </div>
     </section>
 
     <!-- Solutions -->
-    <section id="solutions" class="solutions">
+    <section id="solutions" class="section">
       <div class="container">
-        <h2>Our Solutions</h2>
-        <div class="grid">
-          <article class="card">
+        <div class="stack">
+          <span class="kicker">Solutions</span>
+          <h2>Clean, modular services you can mix & match</h2>
+        </div>
+        <div class="grid grid--3" style="margin-top: var(--s6);">
+          <article class="card stack">
             <h3>Design & Consulting</h3>
-            <p>Planning, route design, and standards guidance.</p>
+            <p class="meta">Planning, route design, BOM and standards guidance.</p>
           </article>
-          <article class="card">
+          <article class="card stack">
             <h3>Splicing & Termination</h3>
-            <p>Precision splicing, connectors, and patch panels.</p>
+            <p class="meta">Precision splicing, connectors and patch panels.</p>
           </article>
-          <article class="card">
+          <article class="card stack">
             <h3>Testing & Certification</h3>
-            <p>OTDR, power meter testing, and full reports.</p>
+            <p class="meta">OTDR, power meter testing and acceptance reports.</p>
+          </article>
+          <article class="card stack">
+            <h3>Maintenance & Repair</h3>
+            <p class="meta">Troubleshooting, fault localization and cleanups.</p>
+          </article>
+          <article class="card stack">
+            <h3>Enclosures & Racks</h3>
+            <p class="meta">Cabinets, trays, patching and cable management.</p>
+          </article>
+          <article class="card stack">
+            <h3>Wireless & Copper</h3>
+            <p class="meta">Cat6A cabling and Wi-Fi to complement fiber.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
+    <!-- Process -->
+    <section id="process" class="section section--tight">
       <div class="container">
-        <h2>Contact Us</h2>
-        <form action="#" method="POST">
-          <label>
-            Name
-            <input type="text" name="name" required>
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" required>
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="4"></textarea>
-          </label>
-          <button type="submit" class="btn btn-primary">Send</button>
-        </form>
+        <div class="stack">
+          <span class="kicker">How we work</span>
+          <h2>A tidy, documented process end-to-end</h2>
+        </div>
+        <div class="grid" style="margin-top: var(--s6);">
+          <div class="card stack"><h3>1. Site survey & scope</h3><p class="meta">Walk-through, routes and risks.</p></div>
+          <div class="card stack"><h3>2. Design & BOM</h3><p class="meta">Topology, labeling and bill of materials.</p></div>
+          <div class="card stack"><h3>3. Install & splice</h3><p class="meta">Neat routing, cabinets and patching.</p></div>
+          <div class="card stack"><h3>4. Test & certify</h3><p class="meta">OTDR & power meter, acceptance docs.</p></div>
+          <div class="card stack"><h3>5. Handover & support</h3><p class="meta">As-built pack, labels and SLA options.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases teaser -->
+    <section id="cases-teaser" class="section">
+      <div class="container">
+        <div class="stack">
+          <span class="kicker">Case studies</span>
+          <h2>Recent deployments</h2>
+        </div>
+        <div class="card stack" style="margin-top: var(--s6);">
+          <h3>Campus backbone — Bremen</h3>
+          <p class="meta">144F SM, LC duplex — OTDR avg 0.21 dB/km — completed in 10 days with after-hours cutover.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container grid grid--2">
+        <div class="stack card">
+          <h2>Contact</h2>
+          <form class="form" action="https://formspree.io/f/your_form_id" method="POST">
+            <label> Name<br><input class="input" required name="name" type="text" placeholder="Your name"></label>
+            <label> Email<br><input class="input" required name="email" type="email" placeholder="you@company.com"></label>
+            <label> Project details<br><textarea class="textarea" name="message" placeholder="Location, timeline, scope…"></textarea></label>
+            <button class="btn btn-primary" type="submit">Send</button>
+          </form>
+          <p class="meta">Or email: hello@gercotronic.com · +49 2103 5725140</p>
+        </div>
+        <div class="stack">
+          <h2>About Gercotronic</h2>
+          <p class="meta">Specialists in neat, standards-compliant fiber deployments. Proper labeling and documentation keep your network maintainable.</p>
+          <div class="grid grid--2">
+            <div class="stack"><div class="meta">Founded</div><strong>2025</strong></div>
+            <div class="stack"><div class="meta">HQ</div><strong>Germany</strong></div>
+            <div class="stack"><div class="meta">Response time</div><strong>&lt; 24h</strong></div>
+            <div class="stack"><div class="meta">Coverage</div><strong>DACH & EU</strong></div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Gercotronic GmbH — DACH & EU</p>
-      <nav aria-label="Footer navigation">
-        <a href="about/">About</a>
-        <a href="cases/">Cases</a>
-        <a href="legal/imprint.html">Imprint</a>
-        <a href="legal/privacy.html">Privacy</a>
-      </nav>
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container" style="padding-block:34px">
+      <div class="footer__cols">
+        <div class="stack">
+          <a class="logo" href="index.html"><img src="assets/image/logo.png" alt="Gercotronic GmbH logo"></a>
+          <p class="meta">Clean fiber-optic solutions with complete documentation.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="meta">
+            <li><a href="about/">About</a></li>
+            <li><a href="cases/">Cases</a></li>
+            <li><a href="index.html#process">Process</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="meta">
+            <li><a href="index.html#solutions">Design & Consulting</a></li>
+            <li><a href="index.html#solutions">Splicing</a></li>
+            <li><a href="index.html#solutions">Testing & Certification</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul class="meta">
+            <li><a href="legal/imprint.html">Imprint</a></li>
+            <li><a href="legal/privacy.html">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__fine">
+        <span>© <span id="y"></span> Gercotronic</span>
+        <span>DACH & EU</span>
+      </div>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
