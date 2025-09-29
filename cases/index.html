@@ -1,59 +1,69 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <base href="/gercotronic-preview/">
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Case Studies — Gercotronic</title>
-  <meta name="description" content="Recent fiber-optic deployments by Gercotronic.">
-  <link rel="icon" href="assets/image/favicon.ico">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script defer src="assets/js/app.js"></script>
+  <meta name="description" content="Selected fiber projects delivered by Gercotronic." />
+  <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
-<header class="site-header"><div class="container site-header__inner">
-  <a class="logo" href="index.html"><img src="assets/image/logo.png" alt="Gercotronic GmbH logo"></a>
-  <nav class="nav" aria-label="Main">
-    <a href="index.html#solutions">Solutions</a>
-    <a href="products/">Products</a>
-    <a class="active" href="cases/">Cases</a>
-    <a href="about/">About</a>
-    <a href="index.html#contact" class="btn btn--primary">Get a Quote</a>
-  </nav>
-</div></header>
-
-<main id="main">
-  <section class="section">
-    <div class="container">
-      <div class="stack">
-        <span class="kicker">Case studies</span>
-        <h2>Recent deployments</h2>
-      </div>
-
-      <div class="grid grid-3" style="margin-top:var(--s6)">
-        <article class="card stack">
-          <h3>Campus backbone — Bremen</h3>
-          <p class="meta">144F SM, LC duplex; OTDR avg 0.21 dB/km; 10-day after-hours cutover.</p>
-          <ul class="meta"><li>12 ODFs / 4 buildings</li><li>Label map & PDFs</li><li>PON ready</li></ul>
-        </article>
-        <article class="card stack">
-          <h3>Industrial ring — Hamburg</h3>
-          <p class="meta">Ring topology with spare ducts; acceptance doc & SLA 8×5.</p>
-          <ul class="meta"><li>96F ring</li><li>Patch field cleanup</li><li>Emergency splice kit</li></ul>
-        </article>
-        <article class="card stack">
-          <h3>Office refresh — Munich</h3>
-          <p class="meta">MM→SM migration; labeled trays; cabinet re-patch.</p>
-          <ul class="meta"><li>ODF redesign</li><li>Power meter tests</li><li>Handover pack</li></ul>
-        </article>
-      </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" aria-label="Primary">
+    <div class="container header-row">
+      <a class="brand" href="/" aria-label="Gercotronic Home">
+        <img class="brand-mark" src="/logo.png" alt="" />
+        <span class="brand-name">Gercotronic</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <nav class="main-nav">
+        <ul id="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/cases/" aria-current="page">Case Studies</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
-</main>
+  </header>
 
-<footer class="site-footer">
-  <div class="container" style="padding-block:34px">
-    <div class="footer-fine"><span>© <span id="y"></span> Gercotronic</span><span><a href="legal/imprint.html">Imprint</a> · <a href="legal/privacy.html">Privacy</a></span></div>
-  </div>
-</footer>
+  <main id="main">
+    <section class="hero hero--sub">
+      <div class="container narrow">
+        <h1>Case Studies</h1>
+        <p class="lead">A few representative projects—concise, test-backed, and delivered on schedule.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cards">
+          <article class="card card--wide">
+            <h3>96-core Backbone, 42 km</h3>
+            <p>Dual route between DC and IXP. Avg splice loss 0.21 dB. Acceptance: OTDR 1310/1550, OLTS, end-face photos.</p>
+          </article>
+          <article class="card">
+            <h3>Campus Ring, 14 sites</h3>
+            <p>Resilient L2 ring with diverse paths and MPO→LC cleanup; labeled ODFs and closure diagrams.</p>
+          </article>
+          <article class="card">
+            <h3>Smart-City Cabinets</h3>
+            <p>Traffic cabinets with PoE optics and structured labeling; permit packs and stakeholder maps.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="brand brand--small">
+        <img class="brand-mark" src="/logo.png" alt="" />
+        <span class="brand-name">Gercotronic</span>
+      </div>
+      <small>© <span id="year"></span> Gercotronic · Itterpark 6, 40724 Hilden · <a href="tel:+4921035725140">+49 2103 5725140</a> · <a href="/legal/privacy.html">Privacy</a></small>
+    </div>
+  </footer>
+  <script src="/assets/app.js" defer></script>
 </body>
 </html>
