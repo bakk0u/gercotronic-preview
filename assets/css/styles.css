@@ -25,7 +25,7 @@ a{color:inherit;text-decoration:none}
 .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
 .skip-link:focus{left:12px;top:12px;width:auto;height:auto;background:#fff;border:2px solid var(--accent);padding:.5rem 1rem;border-radius:8px;z-index:1000}
 
-/* Anchor offset for sticky header */
+
 section[id]{scroll-margin-top:80px}
 
 /* Header */
@@ -105,18 +105,26 @@ input:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 
 @media (min-width:1024px){ .cards{grid-template-columns:2fr 1fr 1fr;} }
 @media (min-width:1280px){ .card--wide{grid-column:span 2;} }
 
-/* Brand logo image (replaces .brand-mark) */
+
 .brand-logo { height: 48px; width: auto; display: block; }
 
-/* Optional: keep text for a11y but hide visually */
 .sr-only {
   position: absolute !important;
   width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
-/* Slightly smaller logo on phones */
+
 @media (max-width: 720px){
   .brand-logo { height: 40px; }
 }
 
+
+:root{
+  --radius:10px;
+  --shadow:0 6px 18px rgba(2,6,23,.05);
+}
+.hero-note{ box-shadow: var(--shadow); }
+.section{ padding: clamp(40px, 6vw, 72px) 0; } 
+.main-nav a{ font-weight:500; }                 
+.brand-logo{ height: 44px; }                    
