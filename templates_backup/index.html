@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gercotronic GmbH | Fiber Networks. Built Right.</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#d6e3ff",
+              "surface-bright": "#f9f9ff",
+              "on-primary": "#ffffff",
+              "on-primary-fixed-variant": "#004e5f",
+              "primary-container": "#00d4ff",
+              "on-tertiary-fixed-variant": "#3c475a",
+              "surface-dim": "#cfdaf1",
+              "on-secondary-container": "#55637d",
+              "surface-container": "#e7eeff",
+              "error-container": "#ffdad6",
+              "surface-variant": "#d8e3fa",
+              "secondary-fixed-dim": "#b9c7e4",
+              "on-tertiary-fixed": "#111c2c",
+              "surface-container-low": "#f0f3ff",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#39475f",
+              "inverse-primary": "#3cd7ff",
+              "on-error-container": "#93000a",
+              "secondary": "#515f78",
+              "tertiary-container": "#b8c3da",
+              "on-surface": "#111c2c",
+              "surface-container-high": "#dee8ff",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#3c494e",
+              "tertiary-fixed": "#d8e3fa",
+              "inverse-surface": "#263142",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#ebf1ff",
+              "error": "#ba1a1a",
+              "on-primary-container": "#00586b",
+              "surface-container-highest": "#d8e3fa",
+              "on-secondary-fixed": "#0d1c32",
+              "primary-fixed-dim": "#3cd7ff",
+              "secondary-container": "#d2e0fe",
+              "primary-fixed": "#b4ebff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#bcc7dd",
+              "on-primary-fixed": "#001f27",
+              "background": "#f9f9ff",
+              "primary": "#00677e",
+              "outline": "#6c797f",
+              "on-background": "#111c2c",
+              "on-tertiary-container": "#455063",
+              "outline-variant": "#bbc9cf",
+              "tertiary": "#545f72",
+              "surface": "#f9f9ff",
+              "surface-tint": "#00677e"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0, 103, 126, 0.9) 0%, rgba(0, 212, 255, 0.8) 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl border-b border-slate-200/20 shadow-sm">
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-['Space_Grotesk'] font-bold tracking-tight text-slate-900">Gercotronic</span>
+<div class="hidden md:flex gap-6">
+<a class="text-cyan-600 border-b-2 border-cyan-600 pb-1 font-['Space_Grotesk'] font-bold tracking-tight" href="#">Home</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="#">Services</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="#">Packages</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="#">Projects</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="#">About</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="#">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-sm font-medium text-slate-600 hover:text-cyan-600 transition-colors">EN/DE</button>
+<button class="bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container px-6 py-2 rounded-lg transition-all duration-300 font-semibold shadow-md active:scale-95">Get a Quote</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center pt-20 overflow-hidden bg-on-surface">
+<div class="absolute inset-0 z-0">
+<img alt="Fiber Infrastructure" class="w-full h-full object-cover opacity-40" data-alt="Close-up of a high-precision fiber optic fusion splicer with vibrant blue and orange light arcs during a connection process in a technical lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB81J5go6jNhAVt6FpumR-VpbSr6WtHrDa7lCS9P5Soen8Baa9p-bMW4AX1sjDnU28192oQ6tHV14IPGXX_OnXIFvPC0vLgkdMJVbpJPKhiHWfEgWuq1H1LhKxTV3OHZPhAuyyK0NmJ-71YOTiCbA0Uz-BSlYI-BCcL6j0f4cGkaCgljcaH1JeYO5-ixGJhfNmStXUlxx86TFPhQYL-pUMdt1xW3DKiMubjt1bNhf2_KlXmaZCHNLj2alqavH7untdY8PtgQO5gKJg"/>
+<div class="absolute inset-0 hero-gradient opacity-60"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="space-y-8">
+<h1 class="font-headline text-6xl md:text-7xl font-bold text-white tracking-tight leading-[1.1] text-glow">
+                        Fiber networks.<br/>Built right.
+                    </h1>
+<p class="text-xl md:text-2xl text-white/90 font-light leading-relaxed max-w-xl">
+                        Planning, deployment, and certification of fiber infrastructure for ISPs, municipalities, and campuses.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold text-lg hover:shadow-[0_0_20px_rgba(0,212,255,0.5)] transition-all active:scale-95">
+                            Get a Quote
+                        </button>
+<button class="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-bold text-lg backdrop-blur-sm transition-all active:scale-95">
+                            Explore Services
+                        </button>
+</div>
+</div>
+<div class="hidden lg:flex items-center justify-center">
+<div class="relative w-full aspect-square max-w-md">
+<div class="absolute inset-0 bg-primary-container/20 rounded-full blur-[100px]"></div>
+<div class="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-2xl">
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" data-icon="settings_input_component">settings_input_component</span>
+</div>
+<div>
+<div class="text-white font-bold">Live Status</div>
+<div class="text-primary-container text-xs font-mono uppercase tracking-widest">System Operational</div>
+</div>
+</div>
+<div class="h-[2px] w-full bg-gradient-to-r from-primary-container to-transparent opacity-30"></div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<div class="text-white/60 text-xs uppercase tracking-tighter">Throughput</div>
+<div class="text-white text-2xl font-bold font-headline">800 Gbps</div>
+</div>
+<div class="space-y-1">
+<div class="text-white/60 text-xs uppercase tracking-tighter">Latency</div>
+<div class="text-primary-container text-2xl font-bold font-headline">&lt; 1.2 ms</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Facts Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="font-headline text-4xl font-bold text-on-surface mb-4">Unrivaled Infrastructure Engineering</h2>
+<div class="h-1.5 w-24 bg-primary-container rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Fact Card 1 -->
+<div class="group bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-highest transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="hub">hub</span>
+</div>
+<div class="relative z-10">
+<div class="h-14 w-14 bg-primary rounded-lg flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4 text-on-surface">Precision Splicing</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                                Low-loss fusion techniques ensuring an average loss of ≤ 0.25 dB. Every fiber core aligned for maximum throughput.
+                            </p>
+</div>
+</div>
+<!-- Fact Card 2 -->
+<div class="group bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-highest transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="description">description</span>
+</div>
+<div class="relative z-10">
+<div class="h-14 w-14 bg-primary rounded-lg flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="verified">verified</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4 text-on-surface">Certified Documentation</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                                Full bidirectional OTDR reports and link loss budgets provided for every installation. Compliance guaranteed.
+                            </p>
+</div>
+</div>
+<!-- Fact Card 3 -->
+<div class="group bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-highest transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="schedule">schedule</span>
+</div>
+<div class="relative z-10">
+<div class="h-14 w-14 bg-primary rounded-lg flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="handshake">handshake</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4 text-on-surface">Reliable Delivery</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                                On-time execution and within-budget deployment. Our German engineering heritage means reliability is non-negotiable.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Depth / Technical Showcase -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row gap-16 items-center">
+<div class="md:w-1/2 order-2 md:order-1">
+<div class="grid grid-cols-2 gap-4">
+<div class="h-64 rounded-2xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Professional technician working on a complex network rack with glowing server indicator lights in a climate-controlled data center environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMGfHHUj0-p_ekRjAn2TtmxBd-sHtCeJ4wKavcmZFST_KiCk0ex5xWpQzCEaGtnyHaLzoyZp_XeVqSC0MbT7EgepXS9qWZ0bAZ2FFJUpWHVgwJvWDY8usGaCzTNcpfDugYM7vd1O3Tzx14NQAjQu66xIAixOkO6d995ExFyZObjRXQtFhvFWip4EM15btMPu-xFZGqx23vwyY1K6mZu9NxWr-OU9tuZyxIGbJasLqVB4yPaCaesBWQSu3s-CYDDFXt6qY_WTqHu1A"/>
+</div>
+<div class="h-64 mt-12 rounded-2xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Modern high-tech workspace with fiber optic cables emerging from an underground installation point during a suburban infrastructure upgrade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU4KgD-fuqPd7ODV_13jEaVerFogjnviTywOD2wu126G2OTLkStwB1q46IC9Aq0b1ipkUbCH96RzS4XURjDiuyPE-Wk15U9LxgP-p9hlYGvo7I7cXwhvMd1ICGtP1CElhXXR5TedwKWmjQzXJsFg3uj3bvMj6zbH_c6Fz1GPepoyqJpiC-qP0olquqNvD3jTSJsw_GeNCNPV2k9YRbe323yZlugSgcvHQMCF2EI0Ac47kJlpAfS-jZLHIF4aTA9XxgWQuYIb2R4YM"/>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 order-1 md:order-2 space-y-6">
+<span class="text-primary font-bold uppercase tracking-widest text-sm">German Engineering</span>
+<h2 class="font-headline text-5xl font-bold text-on-surface leading-tight">Future-Proof Your Regional Infrastructure</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                        We don't just pull cables. We design the backbone of the digital society. From complex urban micro-trenching to campus-wide secure link certifications, Gercotronic is the partner of choice for high-availability fiber optics.
+                    </p>
+<ul class="space-y-4 pt-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="font-medium text-on-surface">VDSL to FTTH Transition Management</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="font-medium text-on-surface">Campus Network Security Protocols</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="font-medium text-on-surface">Redundant Path Architecture</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 font-['Inter'] text-sm leading-relaxed w-full mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-white mb-4">Gercotronic</div>
+<p class="mb-6">Empowering connectivity through high-resolution fiber engineering. Based in Germany, operating globally.</p>
+<div class="flex gap-4">
+<a class="hover:text-cyan-400 transition-colors" href="#"><span class="material-symbols-outlined" data-icon="language">language</span></a>
+<a class="hover:text-cyan-400 transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase tracking-wider text-xs">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="hover:text-cyan-400 transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-cyan-400 transition-colors" href="#">Services</a></li>
+<li><a class="hover:text-cyan-400 transition-colors" href="#">Case Studies</a></li>
+<li><a class="hover:text-cyan-400 transition-colors" href="#">Technical Specs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase tracking-wider text-xs">Legal</h4>
+<ul class="space-y-4">
+<li><a class="hover:text-cyan-400 transition-colors" href="#">Impressum</a></li>
+<li><a class="hover:text-cyan-400 transition-colors" href="#">Datenschutzerklärung</a></li>
+<li><a class="hover:text-cyan-400 transition-colors" href="#">Cookie Settings</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase tracking-wider text-xs">Stay Connected</h4>
+<p class="mb-4">Subscribe to our technical briefing.</p>
+<div class="flex">
+<input class="bg-slate-800 border-none rounded-l-lg px-4 py-2 w-full focus:ring-1 focus:ring-cyan-400 text-white" placeholder="Email address" type="email"/>
+<button class="bg-primary hover:bg-primary-container px-4 py-2 rounded-r-lg text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-800 py-8 px-8 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p>© 2024 Gercotronic GmbH. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Newsletter</a>
+<a class="hover:text-white transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<!-- Cookie Banner -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-[90%] max-w-3xl" id="cookie-banner">
+<div class="bg-white/80 backdrop-blur-xl border border-outline-variant/30 p-6 rounded-2xl shadow-2xl flex flex-col md:flex-row items-center gap-6">
+<div class="flex-1">
+<p class="text-sm text-on-surface leading-relaxed">
+                    We use cookies to enhance your technical experience and analyze our site traffic. By clicking "Accept All", you consent to our use of cookies in accordance with our <a class="text-primary font-bold underline" href="#">Privacy Policy</a>.
+                </p>
+</div>
+<div class="flex gap-3 w-full md:w-auto">
+<button class="flex-1 md:flex-none px-6 py-2.5 text-sm font-bold text-on-surface hover:bg-surface-container-high rounded-lg transition-colors">Decline</button>
+<button class="flex-1 md:flex-none px-8 py-2.5 text-sm font-bold bg-primary text-on-primary rounded-lg shadow-lg hover:shadow-primary/30 transition-all active:scale-95">Accept All</button>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#d6e3ff",
+              "surface-bright": "#f9f9ff",
+              "on-primary": "#ffffff",
+              "on-primary-fixed-variant": "#004e5f",
+              "primary-container": "#00d4ff",
+              "on-tertiary-fixed-variant": "#3c475a",
+              "surface-dim": "#cfdaf1",
+              "on-secondary-container": "#55637d",
+              "surface-container": "#e7eeff",
+              "error-container": "#ffdad6",
+              "surface-variant": "#d8e3fa",
+              "secondary-fixed-dim": "#b9c7e4",
+              "on-tertiary-fixed": "#111c2c",
+              "surface-container-low": "#f0f3ff",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#39475f",
+              "inverse-primary": "#3cd7ff",
+              "on-error-container": "#93000a",
+              "secondary": "#515f78",
+              "tertiary-container": "#b8c3da",
+              "on-surface": "#111c2c",
+              "surface-container-high": "#dee8ff",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#3c494e",
+              "tertiary-fixed": "#d8e3fa",
+              "inverse-surface": "#263142",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#ebf1ff",
+              "error": "#ba1a1a",
+              "on-primary-container": "#00586b",
+              "surface-container-highest": "#d8e3fa",
+              "on-secondary-fixed": "#0d1c32",
+              "primary-fixed-dim": "#3cd7ff",
+              "secondary-container": "#d2e0fe",
+              "primary-fixed": "#b4ebff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#bcc7dd",
+              "on-primary-fixed": "#001f27",
+              "background": "#f9f9ff",
+              "primary": "#00677e",
+              "outline": "#6c797f",
+              "on-background": "#111c2c",
+              "on-tertiary-container": "#455063",
+              "outline-variant": "#bbc9cf",
+              "tertiary": "#545f72",
+              "surface": "#f9f9ff",
+              "surface-tint": "#00677e"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .legal-content h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: #111c2c;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            letter-spacing: -0.01em;
+        }
+        .legal-content p {
+            margin-bottom: 1.25rem;
+            color: #3c494e;
+            line-height: 1.7;
+        }
+        .tonal-shift {
+            background-color: #f0f3ff;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-slate-200/20 shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold text-slate-900 font-['Space_Grotesk'] tracking-tight">Gercotronic</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 hover:text-cyan-600 transition-colors" href="/templates/index.html">Home</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors" href="/templates/services.html">Services</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors" href="/templates/packages.html">Packages</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors" href="/templates/projects.html">Projects</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors" href="/templates/about.html">About</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors" href="/templates/contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-600 hover:text-cyan-500 transition-all duration-300 font-medium">EN/DE</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-medium hover:bg-cyan-700 transition-all active:scale-95">Get a Quote</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 max-w-7xl mx-auto px-8 flex flex-col md:flex-row gap-12">
+<!-- SideNavBar -->
+<aside class="md:sticky md:top-24 rounded-lg w-full md:w-64 bg-slate-50 tonal-shift p-4 h-fit">
+<div class="mb-6 px-4">
+<h3 class="font-headline font-bold text-lg text-on-surface">Service Details</h3>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider">Fiber Engineering</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 text-cyan-700 font-semibold border-l-4 border-cyan-600 pl-3 py-2 transition-all duration-200" href="#impressum">
+<span class="material-symbols-outlined text-lg" data-icon="info">info</span>
+<span>Impressum</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:bg-slate-100 pl-4 py-2 rounded-md transition-all duration-200" href="#datenschutz">
+<span class="material-symbols-outlined text-lg" data-icon="settings_input_component">settings_input_component</span>
+<span>Technical Specs</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:bg-slate-100 pl-4 py-2 rounded-md transition-all duration-200" href="/templates/contact.html">
+<span class="material-symbols-outlined text-lg" data-icon="article">article</span>
+<span>Case Studies</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:bg-slate-100 pl-4 py-2 rounded-md transition-all duration-200" href="/templates/about.html">
+<span class="material-symbols-outlined text-lg" data-icon="contact_page">contact_page</span>
+<span>Download vCard</span>
+</a>
+</nav>
+</aside>
+<!-- Content Canvas -->
+<div class="flex-1 space-y-16">
+<!-- Impressum Section -->
+<section class="bg-surface-container-lowest p-10 rounded-xl shadow-sm border-l-4 border-primary" id="impressum">
+<h1 class="font-headline text-4xl font-extrabold text-on-surface mb-8 tracking-tighter">Impressum</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 legal-content">
+<div>
+<h2 class="mt-0">Information according to § 5 TMG</h2>
+<p class="font-medium text-on-surface">Gercotronic GmbH</p>
+<p>Hans-Thoma-Straße 15<br/>68163 Mannheim<br/>Germany</p>
+<h2>Represented by</h2>
+<p>Managing Director: Dr. Marcus Gercotronic</p>
+</div>
+<div>
+<h2 class="mt-0">Contact</h2>
+<p>Phone: +49 (0) 621 1234567-0<br/>
+                        Fax: +49 (0) 621 1234567-9<br/>
+                        Email: info@gercotronic.de</p>
+<h2>Register Entry</h2>
+<p>Entry in the Commercial Register.<br/>
+                        Register Court: District Court Mannheim<br/>
+                        Register Number: HRB 765432</p>
+<h2>VAT ID</h2>
+<p>VAT identification number according to §27 a Value Added Tax Act:<br/>
+                        DE 987 654 321</p>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-outline-variant/20 legal-content">
+<h2>Dispute Resolution</h2>
+<p>The European Commission provides a platform for online dispute resolution (OS): <a class="text-primary hover:underline" href="https://ec.europa.eu/consumers/odr">https://ec.europa.eu/consumers/odr</a>. We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+</div>
+</section>
+<!-- Datenschutzerklärung Section -->
+<section class="bg-surface-container-lowest p-10 rounded-xl shadow-sm" id="datenschutz">
+<h1 class="font-headline text-4xl font-extrabold text-on-surface mb-8 tracking-tighter">Datenschutzerklärung</h1>
+<div class="legal-content">
+<h2>1. Data Protection at a Glance</h2>
+<p>The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data with which you can be personally identified.</p>
+<h2>2. Data Collection on Our Website</h2>
+<p><strong>Who is responsible for the data collection on this website?</strong><br/>The data processing on this website is carried out by the website operator. You can find their contact details in the "Impressum" section of this website.</p>
+<p><strong>How do we collect your data?</strong><br/>Your data is collected on the one hand by you communicating it to us. This can be, for example, data that you enter in a contact form. Other data is collected automatically or after your consent by our IT systems when you visit the website. This is mainly technical data (e.g. internet browser, operating system or time of page call).</p>
+<h2>3. Rights of the Data Subject</h2>
+<p>You have the right at any time to receive information free of charge about the origin, recipient and purpose of your stored personal data. You also have a right to request the correction or deletion of this data. If you have given your consent to data processing, you can revoke this consent at any time for the future. You also have the right to request the restriction of the processing of your personal data under certain circumstances.</p>
+<div class="p-6 bg-surface-container-low rounded-lg my-8 italic text-on-surface-variant">
+                        "As a German engineering firm, Gercotronic GmbH handles your data with the same precision we apply to fiber optic infrastructure. Your privacy is our baseline standard."
+                    </div>
+<h2>4. Server Log Files</h2>
+<p>The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are:</p>
+<ul class="list-disc pl-6 space-y-2 text-on-surface-variant mb-6">
+<li>Browser type and browser version</li>
+<li>Operating system used</li>
+<li>Referrer URL</li>
+<li>Host name of the accessing computer</li>
+<li>Time of the server request</li>
+<li>IP address</li>
+</ul>
+<p>This data is not merged with other data sources. The basis for data processing is Art. 6 para. 1 lit. f GDPR, which allows the processing of data for the fulfillment of a contract or pre-contractual measures.</p>
+<h2>5. Storage Duration</h2>
+<p>Unless a more specific storage period has been mentioned within this data protection declaration, your personal data will remain with us until the purpose for data processing no longer applies. If you assert a justified request for deletion or revoke your consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data.</p>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-slate-900 text-slate-400 font-['Inter'] text-sm leading-relaxed border-t border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-white mb-4">Gercotronic</div>
+<p class="mb-4">Advanced fiber optic solutions for the modern infrastructure of tomorrow. Precision-engineered in Germany.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Services</h4>
+<ul class="space-y-4">
+<li><a class="hover:text-cyan-400 transition-colors" href="/templates/services.html">Infrastructure Planning</a></li>
+<li><a class="hover:text-cyan-400 transition-colors" href="/templates/services.html">Fiber Maintenance</a></li>
+<li><a class="hover:text-cyan-400 transition-colors" href="/templates/services.html">Network Security</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-white underline" href="/templates/index.html#impressum">Impressum</a></li>
+<li><a class="hover:text-cyan-400 transition-colors" href="/templates/index.html#datenschutz">Datenschutzerklärung</a></li>
+<li><a class="hover:text-cyan-400 transition-colors" href="/templates/contact.html">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Connect</h4>
+<div class="flex gap-4 mb-6">
+<span class="material-symbols-outlined hover:text-white cursor-pointer" data-icon="public">public</span>
+<span class="material-symbols-outlined hover:text-white cursor-pointer" data-icon="mail">mail</span>
+</div>
+<p class="text-xs">© 2024 Gercotronic GmbH. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

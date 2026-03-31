@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gercotronic | Service Packages</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .pulse-line {
+            position: relative;
+        }
+        .pulse-line::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #00d4ff;
+            box-shadow: 0 0 8px #00d4ff;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "secondary-fixed": "#d6e3ff",
+                "surface-bright": "#f9f9ff",
+                "on-primary": "#ffffff",
+                "on-primary-fixed-variant": "#004e5f",
+                "primary-container": "#00d4ff",
+                "on-tertiary-fixed-variant": "#3c475a",
+                "surface-dim": "#cfdaf1",
+                "on-secondary-container": "#55637d",
+                "surface-container": "#e7eeff",
+                "error-container": "#ffdad6",
+                "surface-variant": "#d8e3fa",
+                "secondary-fixed-dim": "#b9c7e4",
+                "on-tertiary-fixed": "#111c2c",
+                "surface-container-low": "#f0f3ff",
+                "on-tertiary": "#ffffff",
+                "on-secondary-fixed-variant": "#39475f",
+                "inverse-primary": "#3cd7ff",
+                "on-error-container": "#93000a",
+                "secondary": "#515f78",
+                "tertiary-container": "#b8c3da",
+                "on-surface": "#111c2c",
+                "surface-container-high": "#dee8ff",
+                "on-secondary": "#ffffff",
+                "on-surface-variant": "#3c494e",
+                "tertiary-fixed": "#d8e3fa",
+                "inverse-surface": "#263142",
+                "on-error": "#ffffff",
+                "inverse-on-surface": "#ebf1ff",
+                "error": "#ba1a1a",
+                "on-primary-container": "#00586b",
+                "surface-container-highest": "#d8e3fa",
+                "on-secondary-fixed": "#0d1c32",
+                "primary-fixed-dim": "#3cd7ff",
+                "secondary-container": "#d2e0fe",
+                "primary-fixed": "#b4ebff",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-fixed-dim": "#bcc7dd",
+                "on-primary-fixed": "#001f27",
+                "background": "#f9f9ff",
+                "primary": "#00677e",
+                "outline": "#6c797f",
+                "on-background": "#111c2c",
+                "on-tertiary-container": "#455063",
+                "outline-variant": "#bbc9cf",
+                "tertiary": "#545f72",
+                "surface": "#f9f9ff",
+                "surface-tint": "#00677e"
+              },
+              fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-slate-200/20 shadow-sm">
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-['Space_Grotesk'] font-bold text-slate-900">Gercotronic</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-slate-600 hover:text-cyan-600 transition-colors"  href="/templates/index.html">Home</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-slate-600 hover:text-cyan-600 transition-colors"  href="/templates/services.html">Services</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-cyan-600 border-b-2 border-cyan-600 pb-1"  href="/templates/packages.html">Packages</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-slate-600 hover:text-cyan-600 transition-colors"  href="/templates/projects.html">Projects</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-slate-600 hover:text-cyan-600 transition-colors"  href="/templates/about.html">About</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-slate-600 hover:text-cyan-600 transition-colors"  href="/templates/contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-sm font-medium text-slate-600 hover:text-cyan-500 transition-all">EN/DE</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-medium hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 active:scale-95">Get a Quote</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-20">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h1 class="font-headline text-6xl font-bold text-on-surface leading-[1.1] tracking-tight mb-8">
+                        Modular <span class="text-primary italic">Fiber</span> Solutions
+                    </h1>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-xl mb-10">
+                        Our service infrastructure is built on precision and flexibility. While our packages are optimized for specific project phases, they are designed to be fully interoperable—allowing you to scale your deployment with integrated engineering excellence.
+                    </p>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container"></div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-high"></div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-primary-container"></div>
+</div>
+<span class="text-sm font-medium text-on-surface-variant">Trusted by 40+ European Network Providers</span>
+</div>
+</div>
+<div class="relative h-[400px] bg-surface-container rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Close up of luminous glowing fiber optic cables with blue and teal light transmission in a dark high-tech environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkYJGFYJsm9SBnq-555mzxUvNYE2UlUX0Kkl6ABQiBoPU1C6IPVg3beF9IzBG1OOqbw5sDmkhhxJ1c9WnoaQkqEvJoN4eZ6II5fouNc-06FPKZJujfpy9gFYkFCxCgxoNm-x2m0SGShOv7U9A8GpFKnltCq9qnKdu4gVWaQ8QJOZ7mPMh0sMloI8h_MhrKzlfL8AEFnSgm0PNYHb24ywm9Mz_KwZZq04hd2_SFakrqtjFocDvZ3jU7W1Lb6e5_-OOpSdVr2Yj9zB8"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Package Grid -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Survey & Design -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl border-l-4 border-primary shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col h-full">
+<div class="w-12 h-12 bg-primary-container/20 text-primary flex items-center justify-center rounded-lg mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Survey &amp; Design</h3>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">The foundational phase of high-speed connectivity. Precision mapping and regulatory compliance.</p>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>On-site Infrastructure Surveys</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Route Planning &amp; Feasibility</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Environmental &amp; City Permits</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Detailed LLD Design Packs</span>
+</li>
+</ul>
+<div class="pt-6 border-t border-outline-variant/20">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Phase 01</span>
+</div>
+</div>
+<!-- Build & Splice -->
+<div class="group bg-primary text-on-primary p-8 rounded-xl shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16"></div>
+<div class="w-12 h-12 bg-on-primary/20 text-on-primary flex items-center justify-center rounded-lg mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Build &amp; Splice</h3>
+<p class="text-on-primary/80 text-sm mb-8 leading-relaxed">Physical layer execution. Durable underground infrastructure and micro-fusion technology.</p>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-primary">Micro-ducting &amp; Civil Works</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-primary">Cable Pulling &amp; Blowing</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-primary">High-Precision Fusion Splicing</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-primary">Closure &amp; Cabinet Installation</span>
+</li>
+</ul>
+<div class="pt-6 border-t border-on-primary/20">
+<span class="text-xs font-bold uppercase tracking-widest text-primary-container">Phase 02</span>
+</div>
+</div>
+<!-- Test & Certify -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl border-l-4 border-primary shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col h-full">
+<div class="w-12 h-12 bg-primary-container/20 text-primary flex items-center justify-center rounded-lg mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Test &amp; Certify</h3>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Network validation and handover. Comprehensive documentation for asset longevity.</p>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>OTDR &amp; OLTS Performance Testing</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Fiber End-face Inspection Photos</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>As-Built Redline Documentation</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Handover Certificate Issuance</span>
+</li>
+</ul>
+<div class="pt-6 border-t border-outline-variant/20">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Phase 03</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Comparison Table (High-End Asymmetric) -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="flex flex-col md:flex-row gap-16">
+<div class="md:w-1/3">
+<h2 class="font-headline text-4xl font-bold mb-6">Engineered Integration</h2>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                        Unlike standard rigid service models, Gercotronic offers a modular approach. Pick the individual phases required for your brownfield project or combine all three for a turnkey greenfield deployment.
+                    </p>
+<div class="space-y-6">
+<div class="p-4 bg-surface-container-low rounded-lg">
+<p class="font-bold text-primary mb-1">99.8%</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-tighter">Splicing Accuracy</p>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg">
+<p class="font-bold text-primary mb-1">ISO 9001</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-tighter">Certified Standards</p>
+</div>
+</div>
+</div>
+<div class="md:w-2/3 overflow-hidden rounded-xl bg-surface-container-low">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high">
+<th class="p-6 font-headline font-bold">Project Deliverable</th>
+<th class="p-6 font-headline font-bold text-center">Essential</th>
+<th class="p-6 font-headline font-bold text-center">Full-Turnkey</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr>
+<td class="p-6 text-sm font-medium">Digital Route Map</td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-primary" data-icon="done">done</span></td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-primary" data-icon="done">done</span></td>
+</tr>
+<tr>
+<td class="p-6 text-sm font-medium">Blowing/Pulling Logbook</td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-outline/30" data-icon="close">close</span></td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-primary" data-icon="done">done</span></td>
+</tr>
+<tr>
+<td class="p-6 text-sm font-medium">24/7 Field Engineering Support</td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-outline/30" data-icon="close">close</span></td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-primary" data-icon="done">done</span></td>
+</tr>
+<tr>
+<td class="p-6 text-sm font-medium">GIS Integrated Handover</td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-primary" data-icon="done">done</span></td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-primary" data-icon="done">done</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-5xl mx-auto px-8">
+<div class="bg-on-surface text-on-primary rounded-xl p-12 relative overflow-hidden text-center">
+<div class="absolute inset-0 opacity-10">
+<img class="w-full h-full object-cover" data-alt="Abstract server room with glowing blue server racks and data center infrastructure cables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7AlCCDtvctDUJgvlv4HDjfec0vIoK8j69rwTgHdYVmcL0qRdSCDkaTbDyvQDI2kkMUF4byHxxzfOo4JYRwHqfmyeFVn-lRJMw6AKZJFsEX8I7rY_-vXwZjRCV7ejEcthTwLYnZaYEkpZm-Gto_IYGsMRInY87-7BxxPLZ4C2MECF4en2eF530GYeJt_JEC_DwmPWv4rvN29OQkpPYEQ781sCcKGmCH-10rq5naaUFDwgIYnF-adWTAEXeeaH6U3caAilxcBqTEo0"/>
+</div>
+<div class="relative z-10">
+<h2 class="font-headline text-4xl font-bold mb-6">Ready to scale your infrastructure?</h2>
+<p class="text-surface-variant max-w-2xl mx-auto mb-10 text-lg">
+                        Connect with our engineering lead to discuss how our modular fiber packages can be tailored to your specific regional requirements and deployment schedule.
+                    </p>
+<button class="bg-primary-container text-on-primary-container px-10 py-4 rounded-lg font-bold text-lg hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300 active:scale-95">
+                        Request a Custom Package
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-slate-900 text-slate-400 font-['Inter'] text-sm leading-relaxed border-t border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-white mb-4">Gercotronic</div>
+<p class="mb-6">Leading the transition to a fiber-connected future with German precision and innovative engineering.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined hover:text-white transition-colors cursor-pointer" data-icon="language">language</span>
+<span class="material-symbols-outlined hover:text-white transition-colors cursor-pointer" data-icon="mail">mail</span>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Expertise</h4>
+<ul class="space-y-4">
+<li><a class="hover:text-cyan-400 transition-colors"  href="/templates/services.html">Infrastructure Design</a></li>
+<li><a class="hover:text-cyan-400 transition-colors"  href="/templates/services.html">Urban Civil Works</a></li>
+<li><a class="hover:text-cyan-400 transition-colors"  href="/templates/services.html">Testing &amp; Validation</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="hover:text-cyan-400 transition-colors"  href="/templates/impressum.html">Impressum</a></li>
+<li><a class="hover:text-cyan-400 transition-colors"  href="/templates/datenschutz.html">Datenschutzerklärung</a></li>
+<li><a class="hover:text-cyan-400 transition-colors"  href="/templates/about.html">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Newsletter</h4>
+<p class="mb-4">Get quarterly technical updates on fiber engineering trends.</p>
+<div class="flex">
+<input class="bg-slate-800 border-none rounded-l-md w-full px-4 py-2 focus:ring-1 focus:ring-cyan-400" placeholder="Email" type="email"/>
+<button class="bg-cyan-600 text-white px-4 rounded-r-md hover:bg-cyan-500 transition-colors">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-800 text-xs flex flex-col md:flex-row justify-between items-center gap-4">
+<p>© 2024 Gercotronic GmbH. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors"  href="/templates/datenschutz.html">Privacy Policy</a>
+<a class="hover:text-white transition-colors"  href="/templates/impressum.html">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>
