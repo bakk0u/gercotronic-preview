@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#d6e3ff",
+              "surface-bright": "#f9f9ff",
+              "on-primary": "#ffffff",
+              "on-primary-fixed-variant": "#004e5f",
+              "primary-container": "#00d4ff",
+              "on-tertiary-fixed-variant": "#3c475a",
+              "surface-dim": "#cfdaf1",
+              "on-secondary-container": "#55637d",
+              "surface-container": "#e7eeff",
+              "error-container": "#ffdad6",
+              "surface-variant": "#d8e3fa",
+              "secondary-fixed-dim": "#b9c7e4",
+              "on-tertiary-fixed": "#111c2c",
+              "surface-container-low": "#f0f3ff",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#39475f",
+              "inverse-primary": "#3cd7ff",
+              "on-error-container": "#93000a",
+              "secondary": "#515f78",
+              "tertiary-container": "#b8c3da",
+              "on-surface": "#111c2c",
+              "surface-container-high": "#dee8ff",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#3c494e",
+              "tertiary-fixed": "#d8e3fa",
+              "inverse-surface": "#263142",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#ebf1ff",
+              "error": "#ba1a1a",
+              "on-primary-container": "#00586b",
+              "surface-container-highest": "#d8e3fa",
+              "on-secondary-fixed": "#0d1c32",
+              "primary-fixed-dim": "#3cd7ff",
+              "secondary-container": "#d2e0fe",
+              "primary-fixed": "#b4ebff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#bcc7dd",
+              "on-primary-fixed": "#001f27",
+              "background": "#f9f9ff",
+              "primary": "#00677e",
+              "outline": "#6c797f",
+              "on-background": "#111c2c",
+              "on-tertiary-container": "#455063",
+              "outline-variant": "#bbc9cf",
+              "tertiary": "#545f72",
+              "surface": "#f9f9ff",
+              "surface-tint": "#00677e"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+      }
+      .tonal-gradient {
+        background: linear-gradient(135deg, #00677e 0%, #00d4ff 100%);
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl border-b border-slate-200/20 dark:border-slate-800/20 shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold text-slate-900 dark:text-slate-50 font-headline tracking-tight">Gercotronic</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"  href="/index.html">Home</a>
+<a class="text-cyan-600 dark:text-cyan-400 border-b-2 border-cyan-600 dark:border-cyan-400 pb-1"  href="/services.html">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"  href="/packages.html">Packages</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"  href="/projects.html">Projects</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"  href="/about.html">About</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"  href="/contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="text-on-surface-variant text-sm font-medium">EN/DE</span>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-medium hover:bg-primary-container transition-all duration-300 active:opacity-80 active:scale-95">
+                    Get a Quote
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-20">
+<!-- Hero / Overview Section -->
+<section class="max-w-7xl mx-auto px-8 mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-7">
+<h1 class="font-headline text-5xl md:text-7xl font-bold text-on-surface tracking-tight leading-[1.1] mb-8">
+                        Precision Engineering for the <span class="text-primary-container">Optical Backbone</span>.
+                    </h1>
+<p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                        Gercotronic GmbH combines German engineering rigor with high-speed technological agility. We don't just lay cable; we design high-resolution data infrastructure that powers the modern enterprise.
+                    </p>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-6 border-l border-outline-variant/20 pl-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container text-3xl">precision_manufacturing</span>
+<div>
+<h4 class="font-bold text-on-surface">German Standard</h4>
+<p class="text-sm text-on-surface-variant">Strict adherence to DIN and ISO telecommunication protocols.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container text-3xl">speed</span>
+<div>
+<h4 class="font-bold text-on-surface">Loss-Optimized</h4>
+<p class="text-sm text-on-surface-variant">Industry-leading fusion splicing with ≤ 0.25 dB signal attenuation.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid (Asymmetric) -->
+<section class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1: FTTH & Last-Mile -->
+<div class="group relative overflow-hidden bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 shadow-sm transition-all duration-500 hover:-translate-y-2">
+<div class="absolute top-0 right-0 w-32 h-32 tonal-gradient opacity-5 rounded-bl-full transition-all group-hover:opacity-10"></div>
+<span class="material-symbols-outlined text-primary mb-6 text-4xl">home_work</span>
+<h3 class="font-headline text-xl font-bold mb-4">FTTH &amp; Last-Mile</h3>
+<ul class="space-y-3 text-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span>Surveys &amp; Planning</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span>Micro-trenching</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span>Cabinet Install</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span>ONT Activation</li>
+</ul>
+<div class="mt-8 pt-6 border-t border-outline-variant/10">
+<img class="w-full h-32 object-cover rounded-md grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Close-up of a high-tech fiber optic junction box with colorful organized cables in a modern server room environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRLZ-GYbQqPT_wooAdQhMiuh5y52RaR0fPn9S4Zs5rqqE33rlPf8zRjKJuFpxeg_Dc8cMgiZfBEEqVRyVcM3b_3_d2BiQDGKyBqpGVUYdn0wC7_7tnQr6TFiR9wPBhYtNKu5ASx8SBUC8bXudOYu0oCpBT2YnOHL7AkpKuoFHyxTPIa1lw56XxJq2u87PUui0N4sQWSxYB5-F9IAW8zsM8xLh4sPgDXM31AAFC3r7a_JDfGpVH1hAeVqIq7eDUytnFpX30yEeoM9Q"/>
+</div>
+</div>
+<!-- Card 2: Splicing & Testing -->
+<div class="group relative overflow-hidden bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 transition-all duration-500 hover:-translate-y-2">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl">biotech</span>
+<h3 class="font-headline text-xl font-bold mb-4">Splicing &amp; Testing</h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+                        High-precision fusion splicing with guaranteed ≤ 0.25 dB loss across all cores.
+                    </p>
+<div class="bg-surface-container-lowest/50 p-4 rounded-lg mb-6">
+<div class="flex justify-between text-xs font-mono mb-2">
+<span>OTDR Analysis</span>
+<span class="text-primary-container">Active</span>
+</div>
+<div class="h-12 w-full flex items-end gap-1">
+<div class="bg-primary-container/20 w-full h-4"></div>
+<div class="bg-primary-container/40 w-full h-8"></div>
+<div class="bg-primary-container w-full h-2"></div>
+<div class="bg-primary-container/60 w-full h-10"></div>
+</div>
+</div>
+<ul class="space-y-2 text-xs font-medium text-on-surface">
+<li>• OTDR @ 1310/1550 nm</li>
+<li>• Full Trace Delivery</li>
+</ul>
+</div>
+<!-- Card 3: Backbone & DWDM -->
+<div class="lg:col-span-2 group relative overflow-hidden bg-on-surface p-8 rounded-xl transition-all duration-500 hover:-translate-y-2">
+<div class="relative z-10 flex flex-col md:flex-row h-full gap-8">
+<div class="flex-1">
+<span class="material-symbols-outlined text-primary-container mb-6 text-4xl">hub</span>
+<h3 class="font-headline text-2xl font-bold mb-4 text-white">Backbone &amp; DWDM</h3>
+<p class="text-slate-400 text-sm mb-8 max-w-xs">
+                                Scalable long-haul infrastructure leveraging ROADM planning and dispersion mapping for maximum throughput.
+                            </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-slate-800 text-primary-container px-3 py-1 rounded text-xs font-mono tracking-wider">100G TURN-UP</span>
+<span class="bg-slate-800 text-primary-container px-3 py-1 rounded text-xs font-mono tracking-wider">400G OPTICS</span>
+<span class="bg-slate-800 text-primary-container px-3 py-1 rounded text-xs font-mono tracking-wider">ROADM</span>
+</div>
+</div>
+<div class="flex-1 min-h-[200px] rounded-lg overflow-hidden relative">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700" data-alt="Abstract visualization of data flowing through fiber optic cables with glowing cyan and blue light trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmmtkHDXGQKP78IHA4-ziHjxSWHOqVKSSTsw677KW6zHEfxRrBQhF6BwOA4Tc_uUkHJgZdpqcN5wc2AE7FYxZBQHbjTE5YSNzGDDBu8MVLqndYaHpx8WFR7tyaJP4R1xm224VkRJmTw86vZznlbS9jaqflv_XDHdU7Z4doKxRI_Nn9bz4RA2fLbkNRimHHfP2uesyaV80BELLsJvZZTJoB-3yyQtbWkLGGtUm3VL4LYj7JnCXsMVq3jv2qErPLbP9N0Xx6Z_T3Pfk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+<!-- Card 4: Maintenance & SLAs -->
+<div class="md:col-span-2 lg:col-span-1 group bg-surface-container-highest p-8 rounded-xl border border-outline-variant/10 transition-all duration-500 hover:-translate-y-2">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl">support_agent</span>
+<h3 class="font-headline text-xl font-bold mb-4">Maintenance &amp; SLAs</h3>
+<div class="space-y-6">
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+<span class="text-sm font-medium">Availability</span>
+<span class="text-sm text-primary font-bold">24/7/365</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm text-on-surface-variant">Break-fix Response</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm text-on-surface-variant">Labeling Audits</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm text-on-surface-variant">Fiber Health Checks</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Card (Integrated) -->
+<div class="lg:col-span-3 tonal-gradient p-12 rounded-xl flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden relative">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full preserve-3d" viewbox="0 0 100 100">
+<path d="M0,50 Q25,0 50,50 T100,50" fill="none" stroke="white" stroke-width="0.5"></path>
+</svg>
+</div>
+<div class="relative z-10">
+<h2 class="font-headline text-3xl font-bold text-white mb-2">Ready to expand your network?</h2>
+<p class="text-white/80 max-w-md">Our engineering team is standing by to provide technical consultation and deployment quotes.</p>
+</div>
+<button class="relative z-10 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl hover:shadow-cyan-900/20 transition-all active:scale-95">
+                        Contact our Engineering Team
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 dark:bg-slate-950 w-full mt-20 border-t border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="text-xl font-bold text-white mb-4 font-headline">Gercotronic</div>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Professional fiber optic infrastructure engineering for the DACH region. High-precision, high-performance.
+                </p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 text-sm uppercase tracking-wider">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-cyan-400 transition-colors text-sm"  href="/services.html">Services</a></li>
+<li><a class="text-slate-400 hover:text-cyan-400 transition-colors text-sm"  href="/projects.html">Projects</a></li>
+<li><a class="text-slate-400 hover:text-cyan-400 transition-colors text-sm"  href="/projects.html">Case Studies</a></li>
+<li><a class="text-slate-400 hover:text-cyan-400 transition-colors text-sm"  href="/contact.html">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 text-sm uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-cyan-400 transition-colors text-sm"  href="/impressum.html">Impressum</a></li>
+<li><a class="text-slate-400 hover:text-cyan-400 transition-colors text-sm"  href="/datenschutz.html">Datenschutzerklärung</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 text-sm uppercase tracking-wider">Contact</h4>
+<p class="text-slate-400 text-sm mb-4">Engineering Hub, Berlin, DE</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-cyan-400">mail</span>
+<span class="material-symbols-outlined text-cyan-400">phone</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 text-sm">© 2024 Gercotronic GmbH. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="text-slate-500 text-xs font-mono">LATENCY OPTIMIZED</span>
+<span class="text-slate-500 text-xs font-mono">SECURE TRUNK</span>
+</div>
+</div>
+</footer>
+</body></html>

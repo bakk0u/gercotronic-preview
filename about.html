@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#d6e3ff",
+              "surface-bright": "#f9f9ff",
+              "on-primary": "#ffffff",
+              "on-primary-fixed-variant": "#004e5f",
+              "primary-container": "#00d4ff",
+              "on-tertiary-fixed-variant": "#3c475a",
+              "surface-dim": "#cfdaf1",
+              "on-secondary-container": "#55637d",
+              "surface-container": "#e7eeff",
+              "error-container": "#ffdad6",
+              "surface-variant": "#d8e3fa",
+              "secondary-fixed-dim": "#b9c7e4",
+              "on-tertiary-fixed": "#111c2c",
+              "surface-container-low": "#f0f3ff",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#39475f",
+              "inverse-primary": "#3cd7ff",
+              "on-error-container": "#93000a",
+              "secondary": "#515f78",
+              "tertiary-container": "#b8c3da",
+              "on-surface": "#111c2c",
+              "surface-container-high": "#dee8ff",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#3c494e",
+              "tertiary-fixed": "#d8e3fa",
+              "inverse-surface": "#263142",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#ebf1ff",
+              "error": "#ba1a1a",
+              "on-primary-container": "#00586b",
+              "surface-container-highest": "#d8e3fa",
+              "on-secondary-fixed": "#0d1c32",
+              "primary-fixed-dim": "#3cd7ff",
+              "secondary-container": "#d2e0fe",
+              "primary-fixed": "#b4ebff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#bcc7dd",
+              "on-primary-fixed": "#001f27",
+              "background": "#f9f9ff",
+              "primary": "#00677e",
+              "outline": "#6c797f",
+              "on-background": "#111c2c",
+              "on-tertiary-container": "#455063",
+              "outline-variant": "#bbc9cf",
+              "tertiary": "#545f72",
+              "surface": "#f9f9ff",
+              "surface-tint": "#00677e"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+        }
+        .pulse-line {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl border-b border-slate-200/20 shadow-sm">
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-['Space_Grotesk'] font-bold tracking-tight text-slate-900">Gercotronic</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-slate-600 hover:text-cyan-600 transition-colors font-['Inter'] text-sm"  href="/index.html">Home</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors font-['Inter'] text-sm"  href="/services.html">Services</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors font-['Inter'] text-sm"  href="/packages.html">Packages</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors font-['Inter'] text-sm"  href="/projects.html">Projects</a>
+<a class="text-cyan-600 border-b-2 border-cyan-600 pb-1 font-['Inter'] text-sm"  href="/about.html">About</a>
+<a class="text-slate-600 hover:text-cyan-600 transition-colors font-['Inter'] text-sm"  href="/contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-medium text-outline">EN/DE</span>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-lg font-medium text-sm hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-95">Get a Quote</button>
+</div>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[614px] flex items-center px-8 max-w-7xl mx-auto overflow-hidden">
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high text-primary font-label text-xs font-bold rounded-full mb-6">
+<span class="material-symbols-outlined text-sm" data-icon="hub">hub</span>
+                        SINCE 2004
+                    </div>
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tight text-on-surface mb-8 leading-[1.1]">
+                        Engineering-Led <br/>
+<span class="text-primary italic">Fiber Excellence.</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-xl mb-10 leading-relaxed">
+                        Operating from Hilden, Germany, serving the DACH region with precision-engineered infrastructure that defines the future of connectivity.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded font-medium hover:shadow-lg hover:shadow-primary-container/20 transition-all">Meet the Team</button>
+<button class="border-b-2 border-primary-container py-4 px-2 text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                            Our Methodology <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-square rounded-full overflow-hidden border-[16px] border-surface-container shadow-2xl">
+<img alt="Gercotronic HQ" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Modern office architecture in Hilden Itterpark at twilight with blue lighting reflecting off glass facades" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOmW6RFAFR7hSoXq0RXEX94TkquRaVyhkizYjVrzcjML3_6yunZlGi9PbLi3QiXfky_8M52as2AuWZyFZtkIk35Sa06KclcQXwy3B2qhoLsfd9rYoFs-5ZZn6OgPtJITNgAIRxqcE8pkssPHytS-3u3IaBcbkUaHAdwVMSJMIGGnTEGnSrTxsR89aoY9uhnKXEOoo3fuuJ9tTOHUisi8_eM6U4Zh7LqBN6sodOvFR89qT94t0-dr1gYLF6AMXKqLx4LbwmhQ9yPZg"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white p-6 shadow-xl rounded-xl max-w-[200px]">
+<p class="text-3xl font-bold text-primary mb-1">20+</p>
+<p class="text-xs text-on-surface-variant font-medium">Years of field experience in technical infrastructure</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Tonal Break -->
+<section class="bg-surface-container-low py-16 mt-20">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div>
+<p class="text-outline text-xs font-bold tracking-widest uppercase mb-2">Base</p>
+<p class="text-xl font-headline font-bold text-on-surface">Hilden, NRW</p>
+</div>
+<div>
+<p class="text-outline text-xs font-bold tracking-widest uppercase mb-2">Reach</p>
+<p class="text-xl font-headline font-bold text-on-surface">DACH Region</p>
+</div>
+<div>
+<p class="text-outline text-xs font-bold tracking-widest uppercase mb-2">Standards</p>
+<p class="text-xl font-headline font-bold text-on-surface">DIN/ISO Certified</p>
+</div>
+<div>
+<p class="text-outline text-xs font-bold tracking-widest uppercase mb-2">Handover</p>
+<p class="text-xl font-headline font-bold text-on-surface">100% Documentation</p>
+</div>
+</div>
+</section>
+<!-- Philosophy Bento Grid -->
+<section class="max-w-7xl mx-auto px-8 py-32">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="font-headline text-4xl font-bold mb-4">Engineering Philosophy</h2>
+<p class="text-on-surface-variant text-lg">We don't just lay cable; we design resilient data arteries with German precision and transparent milestones.</p>
+</div>
+<div class="h-[2px] flex-grow mx-8 bg-surface-container hidden md:block"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="query_stats">query_stats</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">Measurable Milestones</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Granular project tracking ensuring each phase of the fiber rollout meets technical specifications before proceeding.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="update">update</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">Weekly Updates</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Direct communication channels with site leads providing comprehensive progress reports every Friday without exception.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="inventory">inventory</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-3">Handover Docs</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Complete digital and physical documentation of all splicing, signal tests, and topographical routing for your records.</p>
+</div>
+</div>
+</section>
+<!-- Experience & Team Section -->
+<section class="max-w-7xl mx-auto px-8 py-32 grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div class="relative">
+<div class="sticky top-32">
+<h2 class="font-headline text-4xl font-bold mb-8">Decades of <br/>Field Experience</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="text-primary font-headline text-3xl font-bold opacity-30">01</div>
+<div>
+<h4 class="font-bold text-lg mb-1">VDE Certified Technicians</h4>
+<p class="text-on-surface-variant text-sm">Every team member undergoes rigorous German safety and technical certification protocols annually.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="text-primary font-headline text-3xl font-bold opacity-30">02</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Advanced Splicing Tech</h4>
+<p class="text-on-surface-variant text-sm">We utilize state-of-the-art fusion splicers for minimal decibel loss across long-haul networks.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="text-primary font-headline text-3xl font-bold opacity-30">03</div>
+<div>
+<h4 class="font-bold text-lg mb-1">DACH Regulatory Expertise</h4>
+<p class="text-on-surface-variant text-sm">Navigating the complex permitting and technical landscape of Germany, Austria, and Switzerland.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<div class="h-64 rounded-xl overflow-hidden shadow-lg">
+<img alt="Field Team" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Technical team in professional safety gear working on a fiber optic distribution hub at a client site" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiT_fPWIm1xam5HPAc-Jzc0yvSRTTubzDmleQ_wBF_a9bO7T9DQsf-lVWBwKBL83Nm_5CkqgovLMQepK7mQr--HS3NcRjWv2LzZ87BpjpEn_myu2LTPGC6kUJ8YZVCc-wtKdfzjc1THqauPHFHhR8NHvdJuuDHiSYoblCd1DypFQbEmnZRRMg_r_cwQZ0LrgKV2gn0PQ56n_mNYxMY3937SF1wmJgdLmPTIbpe0NyySJobwhJxXSuB58ozew62ekr2VtRG2Ki0uEs"/>
+</div>
+<div class="bg-primary p-6 rounded-xl text-on-primary">
+<p class="text-sm font-label uppercase tracking-widest mb-4 opacity-70">Certification</p>
+<p class="text-xl font-headline font-bold">TÜV SÜD Infrastructure Partner</p>
+</div>
+</div>
+<div class="space-y-4 pt-12">
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/10">
+<p class="text-sm font-label uppercase tracking-widest mb-4 text-outline">Operating From</p>
+<p class="text-xl font-headline font-bold">Itterpark, Hilden</p>
+<p class="text-xs mt-2 text-on-surface-variant">The hub of engineering excellence in NRW.</p>
+</div>
+<div class="h-80 rounded-xl overflow-hidden shadow-lg">
+<img alt="Technical Detail" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Close up of a fiber optic technician carefully splicing tiny glass fibers with precision equipment in a clean lab environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw2g7bcnMS0lmtoN_ENCMnKdXp58A2KSffjaxw5QesuaRpv9t3TFbdMya1jWfywP16jEPOnS6kAXWp1EpbM-yx8PtyN3Ozu1RJe9idrV-OOjx8R3Q5O3ZFJ4WIeUrEsCeY0BfT6aR3iRPG7al7P2k3wDIxaqFaVpX_90MUH7949Ug-VYZax0xncUtcU73C00XmuRLFOiS0N7YxXyti9cO8dY3Iaybr26R7A623WDyccYPOXCNkJ_M2oEjRWH5D5RH79PIMlzrU7TE"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Context -->
+<section class="max-w-7xl mx-auto px-8 py-20">
+<div class="bg-slate-900 rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-2xl">
+<div class="p-12 md:w-1/2 flex flex-col justify-center">
+<h3 class="text-cyan-400 font-headline text-3xl font-bold mb-6">Serving the DACH Region</h3>
+<p class="text-slate-400 leading-relaxed mb-8">From our headquarters in Hilden, we coordinate large-scale infrastructure projects across Germany, Austria, and Switzerland. Our central location allows for rapid mobilization and onsite support.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-cyan-400" data-icon="location_on">location_on</span>
+<span>Itterpark 7, 40724 Hilden, Germany</span>
+</div>
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-cyan-400" data-icon="mail">mail</span>
+<span>office@gercotronic.de</span>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 min-h-[400px] grayscale contrast-125 opacity-70">
+<img alt="Service Map" class="w-full h-full object-cover" data-alt="Highly detailed map of the DACH region with digital network overlays and glowing nodes representing connectivity" data-location="Hilden, Germany" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqDgpu1M-IwueXStcpAAvC9ZAzxRUgJjV1TA76hQJVe5Mr7vKzjDbaQ8gxP9vammCO6B3D9rEQsmIqB7RerGgKJInN2O-8yz034olVykiplw2Q4MRtnuP_HHNxvstPXeahqkK4f4YzS6WqdiYGkqCvmu7A6vU2WIMFpN4EGUTghSvmJLhAqbcn14i0uptSJLCCbRZWvejuNa1fslNRImGZOl0b7znDBszCBkU-TMS_Bnk9ZdnF3aqDx7yDnFx-LWdCSQBLcwZN7iQ"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 w-full mt-20 border-t border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="text-xl font-bold text-white mb-4">Gercotronic</div>
+<p class="text-slate-400 max-w-sm mb-6 leading-relaxed text-sm">
+                    Premium fiber optic engineering and infrastructure solutions for a connected Europe. Built with German precision.
+                </p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-cyan-400 transition-colors" href="javascript:void(0)">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+<a class="text-slate-400 hover:text-cyan-400 transition-colors" href="javascript:void(0)">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 text-sm">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-cyan-400 transition-colors text-sm"  href="/services.html">Services</a></li>
+<li><a class="text-slate-400 hover:text-cyan-400 transition-colors text-sm"  href="/projects.html">Projects</a></li>
+<li><a class="text-slate-400 hover:text-cyan-400 transition-colors text-sm"  href="/about.html">About</a></li>
+<li><a class="text-slate-400 hover:text-cyan-400 transition-colors text-sm"  href="/contact.html">Newsletter</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 text-sm">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-cyan-400 transition-colors text-sm"  href="/impressum.html">Impressum</a></li>
+<li><a class="text-slate-400 hover:text-cyan-400 transition-colors text-sm"  href="/datenschutz.html">Datenschutzerklärung</a></li>
+<li><a class="text-slate-400 hover:text-cyan-400 transition-colors text-sm"  href="/contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="px-8 py-8 border-t border-slate-800 max-w-7xl mx-auto flex justify-between items-center">
+<p class="text-slate-500 text-xs">© 2024 Gercotronic GmbH. All rights reserved.</p>
+<p class="text-slate-500 text-xs">Engineering the Fiber Future.</p>
+</div>
+</footer>
+</body></html>
