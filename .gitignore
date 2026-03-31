@@ -1,1 +1,6 @@
 .DS_Store
+.DS_Store
+.idea/
+templates/
+templates_backup/
+stitch_raw/
